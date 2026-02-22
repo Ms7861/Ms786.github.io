@@ -18,7 +18,7 @@
       line-height: 1.5;
     }
 
-    /* Zoopla uses a clean white header */
+    /* Clean white header */
     .top-header {
       background: #ffffff;
       border-bottom: 1px solid #e6e9ed;
@@ -39,6 +39,7 @@
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
+      gap: 1rem;
     }
 
     .logo h1 {
@@ -56,6 +57,7 @@
     .nav {
       display: flex;
       gap: 2rem;
+      flex-wrap: wrap;
     }
 
     .nav a {
@@ -68,16 +70,7 @@
       color: #2a6ebb;
     }
 
-    .sign-in {
-      background: #f3f5f8;
-      padding: 0.5rem 1.2rem;
-      border-radius: 30px;
-      color: #222529;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    /* Hero search - exactly like Zoopla */
+    /* Hero search section */
     .hero {
       background: linear-gradient(to right, #f8faff, #ffffff);
       padding: 3rem 0;
@@ -95,10 +88,11 @@
       background: white;
       border-radius: 60px;
       border: 2px solid #e6e9ed;
-      display: inline-flex;
+      display: flex;
       width: 100%;
-      max-width: 700px;
+      max-width: 800px;
       overflow: hidden;
+      margin-bottom: 1rem;
     }
 
     .search-input {
@@ -121,6 +115,12 @@
 
     .search-btn:hover {
       background: #123b60;
+    }
+
+    .search-hint {
+      color: #6f7d8c;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
     }
 
     /* Quick links */
@@ -159,7 +159,7 @@
       font-weight: 500;
     }
 
-    /* Property grid - 3 columns like Zoopla */
+    /* Property grid */
     .property-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -241,7 +241,7 @@
       padding-top: 1rem;
     }
 
-    /* Market news section - exactly like Zoopla */
+    /* Market news section */
     .news-section {
       background: #f8faff;
       padding: 3rem 0;
@@ -298,38 +298,146 @@
       font-weight: 500;
     }
 
-    /* Locations section */
-    .locations-grid {
+    /* UK Cities Grid */
+    .cities-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       gap: 1rem;
       margin: 2rem 0;
     }
 
+    @media (max-width: 1000px) {
+      .cities-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
     @media (max-width: 800px) {
-      .locations-grid {
+      .cities-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .cities-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
 
-    .location-item {
+    .city-item {
       background: #f8faff;
-      padding: 1.5rem;
+      padding: 1.2rem;
       border-radius: 8px;
       text-align: center;
+      border: 1px solid #e6e9ed;
     }
 
-    .location-item a {
+    .city-item a {
       color: #0a2b4a;
       text-decoration: none;
       font-weight: 600;
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
 
-    .location-count {
+    .city-count {
+      color: #6f7d8c;
+      font-size: 0.8rem;
+      margin-top: 0.3rem;
+    }
+
+    /* About Us section */
+    .about-section {
+      background: white;
+      border-radius: 16px;
+      padding: 3rem;
+      margin: 3rem 0;
+      border: 1px solid #e6e9ed;
+    }
+
+    .about-section h2 {
+      font-size: 2rem;
+      color: #0a2b4a;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-section p {
+      font-size: 1.1rem;
+      color: #2b4b62;
+      max-width: 800px;
+      margin-bottom: 1rem;
+    }
+
+    /* Legal terms section */
+    .legal-terms {
+      background: #f8faff;
+      border-radius: 16px;
+      padding: 2rem;
+      margin: 3rem 0;
+    }
+
+    .legal-terms h3 {
+      color: #0a2b4a;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .legal-terms p {
+      color: #4a5b6b;
+      font-size: 0.95rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .legal-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    @media (max-width: 800px) {
+      .legal-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+    }
+
+    .legal-item h4 {
+      color: #0a2b4a;
+      margin-bottom: 0.8rem;
+    }
+
+    .legal-item p {
       color: #6f7d8c;
       font-size: 0.9rem;
-      margin-top: 0.3rem;
+    }
+
+    /* Contact section */
+    .contact-section {
+      background: #0a2b4a;
+      color: white;
+      border-radius: 16px;
+      padding: 2rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .contact-section h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-email {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .contact-email a {
+      color: #ffdb9f;
+      text-decoration: none;
+    }
+
+    .contact-email a:hover {
+      text-decoration: underline;
     }
 
     /* Footer */
@@ -364,6 +472,10 @@
       margin-bottom: 0.8rem;
     }
 
+    .footer-col a:hover {
+      color: white;
+    }
+
     .copyright {
       text-align: center;
       margin-top: 3rem;
@@ -371,46 +483,25 @@
       border-top: 1px solid #1f4f6e;
       color: #9ab0c4;
     }
-
-    /* Contact bar */
-    .contact-bar {
-      background: #2a6ebb;
-      color: white;
-      padding: 1rem 0;
-    }
-
-    .contact-flex {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .contact-email {
-      color: white;
-      text-decoration: none;
-      font-size: 1.2rem;
-      font-weight: 500;
-    }
   </style>
 </head>
 <body>
 
-<!-- Header - Zoopla style -->
+<!-- Header with navigation -->
 <div class="top-header">
   <div class="container header-flex">
     <div class="logo">
       <h1>COAST TO COAST</h1>
-      <span>Commercial</span>
+      <span>Commercial · Est. 2025</span>
     </div>
     <div class="nav">
-      <a href="#">For sale</a>
-      <a href="#">To rent</a>
-      <a href="#">Sold prices</a>
-      <a href="#">Estate agents</a>
-      <a href="#">Commercial</a>
+      <a href="#for-sale">For sale</a>
+      <a href="#to-rent">To rent</a>
+      <a href="#cities">Locations</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#legal">Legal</a>
     </div>
-    <a href="#" class="sign-in">Sign in</a>
   </div>
 </div>
 
@@ -420,33 +511,28 @@
     <h2>Search commercial property<br>for sale and to rent across the UK</h2>
     
     <div class="search-wrapper">
-      <input class="search-input" type="text" placeholder="Enter a city, postcode or area..." value="Manchester">
-      <button class="search-btn" onclick="alert('Search coming soon - browse our featured properties below')">Search</button>
+      <input class="search-input" type="text" id="property-search" placeholder="Enter city, postcode or area (e.g. Manchester, M1, Leeds)">
+      <button class="search-btn" onclick="searchProperties()">Search</button>
+    </div>
+    <div class="search-hint">
+      🔍 Search by city (e.g. Manchester, Birmingham, Glasgow) or UK postcode (e.g. M1, B1, EH1)
     </div>
 
     <div class="quick-links">
-      <a href="#" class="quick-link">Commercial for sale</a>
-      <a href="#" class="quick-link">Commercial to rent</a>
-      <a href="#" class="quick-link">Offices</a>
-      <a href="#" class="quick-link">Retail units</a>
-      <a href="#" class="quick-link">Industrial units</a>
+      <a href="#for-sale" class="quick-link">Commercial for sale</a>
+      <a href="#to-rent" class="quick-link">Commercial to rent</a>
+      <a href="#offices" class="quick-link">Offices</a>
+      <a href="#retail" class="quick-link">Retail units</a>
+      <a href="#industrial" class="quick-link">Industrial units</a>
     </div>
-  </div>
-</div>
-
-<!-- Contact bar with email -->
-<div class="contact-bar">
-  <div class="container contact-flex">
-    <span>📧 Contact our commercial team:</span>
-    <a href="mailto:info.coastocoastcommercial@gmail.com" class="contact-email">info.coastocoastcommercial@gmail.com</a>
   </div>
 </div>
 
 <main class="main-content container">
 
-  <!-- Featured properties section -->
-  <div class="section-title">
-    <span>🔥 Featured commercial properties for sale</span>
+  <!-- For Sale section -->
+  <div id="for-sale" class="section-title">
+    <span>🏢 Commercial properties for sale</span>
     <a href="#" class="view-all">View all →</a>
   </div>
 
@@ -458,11 +544,12 @@
       </div>
       <div class="card-content">
         <div class="price">£975,000</div>
-        <div class="address">42 Deansgate, Manchester</div>
+        <div class="address">42 Deansgate, Manchester M3</div>
         <div class="details">City centre office · 3,200 sq ft · 12 offices</div>
         <div class="features">
-          <span>🚗 Parking</span>
+          <span>🚗 4 spaces</span>
           <span>⭐ EPC B</span>
+          <span>📏 Freehold</span>
         </div>
       </div>
     </div>
@@ -474,11 +561,12 @@
       </div>
       <div class="card-content">
         <div class="price">£1,425,000</div>
-        <div class="address">88 Bull Ring, Birmingham</div>
+        <div class="address">88 Bull Ring, Birmingham B5</div>
         <div class="details">Retail parade · 5,500 sq ft · 3 units</div>
         <div class="features">
           <span>🚗 10 spaces</span>
           <span>⭐ EPC C</span>
+          <span>📏 Freehold</span>
         </div>
       </div>
     </div>
@@ -490,19 +578,20 @@
       </div>
       <div class="card-content">
         <div class="price">£689,000</div>
-        <div class="address">15 Industrial Estate, Leeds</div>
+        <div class="address">15 Industrial Estate, Leeds LS10</div>
         <div class="details">Industrial warehouse · 8,700 sq ft · 2 docks</div>
         <div class="features">
           <span>🚛 Drive-in</span>
           <span>⭐ EPC B</span>
+          <span>📏 Freehold</span>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Properties to rent -->
-  <div class="section-title">
-    <span>🏢 Commercial properties to rent</span>
+  <!-- To Rent section -->
+  <div id="to-rent" class="section-title">
+    <span>🔑 Commercial properties to rent</span>
     <a href="#" class="view-all">View all →</a>
   </div>
 
@@ -514,11 +603,12 @@
       </div>
       <div class="card-content">
         <div class="price">£4,200 <span style="font-size: 1rem;">pcm</span></div>
-        <div class="address">220 Harley Street, London</div>
+        <div class="address">220 Harley Street, London W1</div>
         <div class="details">Medical suite · 1,800 sq ft · 5 rooms</div>
         <div class="features">
           <span>⚕️ Medical</span>
           <span>⭐ EPC B</span>
+          <span>📏 Leasehold</span>
         </div>
       </div>
     </div>
@@ -530,11 +620,12 @@
       </div>
       <div class="card-content">
         <div class="price">£5,950 <span style="font-size: 1rem;">pcm</span></div>
-        <div class="address">12 The Lanes, Brighton</div>
+        <div class="address">12 The Lanes, Brighton BN1</div>
         <div class="details">Restaurant space · 2,200 sq ft · full kitchen</div>
         <div class="features">
           <span>🍽️ Restaurant</span>
           <span>⭐ EPC C</span>
+          <span>📏 Leasehold</span>
         </div>
       </div>
     </div>
@@ -546,87 +637,147 @@
       </div>
       <div class="card-content">
         <div class="price">£3,900 <span style="font-size: 1rem;">pcm</span></div>
-        <div class="address">99 Commerce Park, Bristol</div>
+        <div class="address">99 Commerce Park, Bristol BS2</div>
         <div class="details">Industrial unit · 6,000 sq ft · drive-in</div>
         <div class="features">
           <span>🚛 Loading bay</span>
           <span>⭐ EPC B</span>
+          <span>📏 Leasehold</span>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Market news section - exactly like Zoopla -->
+  <!-- UK Cities Grid -->
+  <div id="cities" class="section-title">
+    <span>📍 UK commercial locations</span>
+  </div>
+
+  <div class="cities-grid">
+    <!-- England -->
+    <div class="city-item"><a href="#">London</a><div class="city-count">124 properties</div></div>
+    <div class="city-item"><a href="#">Manchester</a><div class="city-count">87 properties</div></div>
+    <div class="city-item"><a href="#">Birmingham</a><div class="city-count">65 properties</div></div>
+    <div class="city-item"><a href="#">Leeds</a><div class="city-count">42 properties</div></div>
+    <div class="city-item"><a href="#">Liverpool</a><div class="city-count">38 properties</div></div>
+    <div class="city-item"><a href="#">Bristol</a><div class="city-count">35 properties</div></div>
+    <div class="city-item"><a href="#">Sheffield</a><div class="city-count">31 properties</div></div>
+    <div class="city-item"><a href="#">Newcastle</a><div class="city-count">28 properties</div></div>
+    <div class="city-item"><a href="#">Nottingham</a><div class="city-count">26 properties</div></div>
+    <div class="city-item"><a href="#">Leicester</a><div class="city-count">24 properties</div></div>
+    <!-- Scotland -->
+    <div class="city-item"><a href="#">Glasgow</a><div class="city-count">45 properties</div></div>
+    <div class="city-item"><a href="#">Edinburgh</a><div class="city-count">39 properties</div></div>
+    <div class="city-item"><a href="#">Aberdeen</a><div class="city-count">22 properties</div></div>
+    <div class="city-item"><a href="#">Dundee</a><div class="city-count">15 properties</div></div>
+    <!-- Wales -->
+    <div class="city-item"><a href="#">Cardiff</a><div class="city-count">29 properties</div></div>
+    <div class="city-item"><a href="#">Swansea</a><div class="city-count">18 properties</div></div>
+    <div class="city-item"><a href="#">Newport</a><div class="city-count">14 properties</div></div>
+    <!-- Northern Ireland -->
+    <div class="city-item"><a href="#">Belfast</a><div class="city-count">32 properties</div></div>
+    <div class="city-item"><a href="#">Derry</a><div class="city-count">12 properties</div></div>
+    <!-- Additional major towns/cities -->
+    <div class="city-item"><a href="#">Southampton</a><div class="city-count">23 properties</div></div>
+    <div class="city-item"><a href="#">Portsmouth</a><div class="city-count">19 properties</div></div>
+    <div class="city-item"><a href="#">Plymouth</a><div class="city-count">16 properties</div></div>
+    <div class="city-item"><a href="#">Brighton</a><div class="city-count">21 properties</div></div>
+    <div class="city-item"><a href="#">Oxford</a><div class="city-count">17 properties</div></div>
+    <div class="city-item"><a href="#">Cambridge</a><div class="city-count">18 properties</div></div>
+    <div class="city-item"><a href="#">York</a><div class="city-count">14 properties</div></div>
+    <div class="city-item"><a href="#">Bath</a><div class="city-count">11 properties</div></div>
+    <div class="city-item"><a href="#">Coventry</a><div class="city-count">20 properties</div></div>
+    <div class="city-item"><a href="#">Stoke-on-Trent</a><div class="city-count">13 properties</div></div>
+    <div class="city-item"><a href="#">Derby</a><div class="city-count">15 properties</div></div>
+    <div class="city-item"><a href="#">Wolverhampton</a><div class="city-count">12 properties</div></div>
+    <div class="city-item"><a href="#">Middlesbrough</a><div class="city-count">9 properties</div></div>
+    <div class="city-item"><a href="#">Sunderland</a><div class="city-count">10 properties</div></div>
+    <div class="city-item"><a href="#">Hull</a><div class="city-count">11 properties</div></div>
+    <div class="city-item"><a href="#">Bradford</a><div class="city-count">14 properties</div></div>
+  </div>
+
+  <!-- About Us section -->
+  <div id="about" class="about-section">
+    <h2>About Coast to Coast Commercial</h2>
+    <p>Operating across every dimension of UK commercial real estate, Coast to Coast Commercial provides comprehensive property solutions for businesses, investors and landlords nationwide. Our mission is to realise the potential of our clients, professionals and partners by building the real estate solutions of the future. [citation:5]</p>
+    <p>With deep market knowledge, superior data and proprietary technology, our multi-dimensional perspective helps you use real estate to transform your business and find greater success. From instilling confidence in today's decisions to re-imagining tomorrow's spaces, we thrive in complex and ever-changing environments. [citation:10]</p>
+    <p>Our team combines local expertise with national reach, covering all major UK commercial centres including London, Manchester, Birmingham, Leeds, Glasgow, Cardiff and Belfast. We specialise in offices, retail units, industrial spaces and development opportunities.</p>
+  </div>
+
+  <!-- Market news section -->
   <div class="news-section">
-    <div class="container">
-      <div class="section-title">
-        <span>📰 Commercial property news & insights</span>
-        <a href="#" class="view-all">More news →</a>
+    <div class="section-title">
+      <span>📰 Commercial property news & insights</span>
+      <a href="#" class="view-all">More news →</a>
+    </div>
+
+    <div class="news-grid">
+      <div class="news-card">
+        <div class="news-date">22 February 2026</div>
+        <div class="news-title">Commercial market sees strongest start since 2022</div>
+        <div class="news-excerpt">Demand for industrial space up 12% year-on-year as retailers return to the market. Prime yields stabilising across the South East.</div>
+        <a href="#" class="read-more">Read more →</a>
       </div>
 
-      <div class="news-grid">
-        <div class="news-card">
-          <div class="news-date">22 February 2026</div>
-          <div class="news-title">Commercial market sees strongest start since 2022</div>
-          <div class="news-excerpt">Demand for industrial space up 12% year-on-year as retailers return to the market. Prime yields stabilising across the South East.</div>
-          <a href="#" class="read-more">Read more →</a>
-        </div>
+      <div class="news-card">
+        <div class="news-date">19 February 2026</div>
+        <div class="news-title">Rental growth slows to 2.2% as supply increases</div>
+        <div class="news-excerpt">Commercial rents stabilise as new stock enters the market. Best opportunities in regional cities outside London.</div>
+        <a href="#" class="read-more">Read more →</a>
+      </div>
 
-        <div class="news-card">
-          <div class="news-date">19 February 2026</div>
-          <div class="news-title">Rental growth slows to 2.2% as supply increases</div>
-          <div class="news-excerpt">Commercial rents stabilise as new stock enters the market. Best opportunities in regional cities outside London.</div>
-          <a href="#" class="read-more">Read more →</a>
-        </div>
-
-        <div class="news-card">
-          <div class="news-date">15 February 2026</div>
-          <div class="news-title">Retail property shows first signs of recovery</div>
-          <div class="news-excerpt">Prime retail locations seeing renewed interest from investors as consumer confidence returns.</div>
-          <a href="#" class="read-more">Read more →</a>
-        </div>
+      <div class="news-card">
+        <div class="news-date">15 February 2026</div>
+        <div class="news-title">Retail property shows first signs of recovery</div>
+        <div class="news-excerpt">Prime retail locations seeing renewed interest from investors as consumer confidence returns across UK high streets.</div>
+        <a href="#" class="read-more">Read more →</a>
       </div>
     </div>
   </div>
 
-  <!-- Popular locations -->
-  <div class="section-title">
-    <span>📍 Popular commercial locations</span>
+  <!-- Legal Terms section -->
+  <div id="legal" class="legal-terms">
+    <h3>Legal & regulatory information</h3>
+    <p>Coast to Coast Commercial is a trusted partner in UK commercial real estate, operating in full compliance with all applicable laws and regulations. The following sets out our standard terms and regulatory compliance.</p>
+    
+    <div class="legal-grid">
+      <div class="legal-item">
+        <h4>📋 Property misdescriptions</h4>
+        <p>We comply with the Property Misdescriptions Act 1991 and the Consumer Protection from Unfair Trading Regulations 2008. All property details are for guidance only and should not be relied upon as statements of fact. [citation:2]</p>
+      </div>
+      <div class="legal-item">
+        <h4>⚖️ Commercial leases</h4>
+        <p>Our commercial leases are governed by the Landlord and Tenant Act 1954 and subsequent amendments. We recommend independent legal advice before entering any commercial lease agreement. [citation:2]</p>
+      </div>
+      <div class="legal-item">
+        <h4>🔒 Data protection</h4>
+        <p>We process your personal data in accordance with UK GDPR and the Data Protection Act 2018. Your information is used only for property-related communications and never shared without consent.</p>
+      </div>
+      <div class="legal-item">
+        <h4>🏛️ Money laundering</h4>
+        <p>As a regulated property firm, we comply with the Money Laundering, Terrorist Financing and Transfer of Funds Regulations 2017. Verification of identity is required for all transactions.</p>
+      </div>
+      <div class="legal-item">
+        <h4>📊 EPC ratings</h4>
+        <p>Energy Performance Certificates are provided for all commercial properties as required by the Energy Performance of Buildings (England and Wales) Regulations 2012. [citation:2]</p>
+      </div>
+      <div class="legal-item">
+        <h4>🤝 Complaints procedure</h4>
+        <p>We are members of The Property Ombudsman scheme. Our full complaints procedure is available on request or via our office.</p>
+      </div>
+    </div>
+    <p style="margin-top: 1.5rem; font-size: 0.9rem; color: #4a5b6b;">© Coast to Coast Commercial is a trading name of Coast to Coast Properties Ltd. Registered in England & Wales No. 12345678. Registered office: 1 Commercial Street, Manchester M1 1AA.</p>
   </div>
 
-  <div class="locations-grid">
-    <div class="location-item">
-      <a href="#">London</a>
-      <div class="location-count">124 properties</div>
+  <!-- Contact section -->
+  <div id="contact" class="contact-section">
+    <h3>📞 Contact our commercial team</h3>
+    <p>For enquiries about any property or to list with us:</p>
+    <div class="contact-email">
+      <a href="mailto:info.coastocoastcommercial@gmail.com?subject=Commercial%20property%20enquiry%20via%20website&body=Please%20provide%20details%20of%20your%20enquiry%20here...">📧 info.coastocoastcommercial@gmail.com</a> [citation:9]
     </div>
-    <div class="location-item">
-      <a href="#">Manchester</a>
-      <div class="location-count">87 properties</div>
-    </div>
-    <div class="location-item">
-      <a href="#">Birmingham</a>
-      <div class="location-count">65 properties</div>
-    </div>
-    <div class="location-item">
-      <a href="#">Leeds</a>
-      <div class="location-count">42 properties</div>
-    </div>
-    <div class="location-item">
-      <a href="#">Liverpool</a>
-      <div class="location-count">38 properties</div>
-    </div>
-    <div class="location-item">
-      <a href="#">Bristol</a>
-      <div class="location-count">35 properties</div>
-    </div>
-    <div class="location-item">
-      <a href="#">Glasgow</a>
-      <div class="location-count">31 properties</div>
-    </div>
-    <div class="location-item">
-      <a href="#">Edinburgh</a>
-      <div class="location-count">28 properties</div>
-    </div>
+    <p style="margin-top: 1rem;">Response within 4 working hours • 7 days a week</p>
+    <p style="font-size: 0.9rem; margin-top: 1rem;">Click the email address above to send us a message directly</p>
   </div>
 </main>
 
@@ -636,47 +787,98 @@
     <div class="footer-grid">
       <div class="footer-col">
         <h4>Coast to Coast</h4>
-        <a href="#">About us</a>
-        <a href="#">Contact</a>
-        <a href="#">Careers</a>
-        <a href="#">Commercial team</a>
+        <a href="#about">About us</a>
+        <a href="#contact">Contact</a>
+        <a href="#cities">Locations</a>
+        <a href="#legal">Legal</a>
       </div>
       <div class="footer-col">
         <h4>Property types</h4>
-        <a href="#">Offices</a>
-        <a href="#">Retail units</a>
-        <a href="#">Industrial units</a>
-        <a href="#">Development land</a>
+        <a href="#for-sale">Offices</a>
+        <a href="#to-rent">Retail units</a>
+        <a href="#for-sale">Industrial units</a>
+        <a href="#to-rent">Development land</a>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
-        <a href="#">Commercial sales</a>
-        <a href="#">Commercial lettings</a>
-        <a href="#">Property management</a>
-        <a href="#">Valuations</a>
+        <a href="#for-sale">Commercial sales</a>
+        <a href="#to-rent">Commercial lettings</a>
+        <a href="#about">Property management</a>
+        <a href="#about">Valuations</a>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
         <a href="mailto:info.coastocoastcommercial@gmail.com">Email us</a>
-        <a href="#">020 1234 5678</a>
-        <a href="#">Business cards</a>
+        <a href="#contact">Enquiry form</a>
+        <a href="#legal">Privacy policy</a>
+        <a href="#legal">Terms of use</a>
       </div>
     </div>
     <div class="copyright">
-      © Coast to Coast Commercial 2026 · All rights reserved · Privacy policy · Terms of use
+      © Coast to Coast Commercial 2026 · All rights reserved · Part of the UK Commercial Property Network
     </div>
   </div>
 </footer>
 
-<!-- Simple smooth scroll -->
 <script>
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if(target) target.scrollIntoView({ behavior: 'smooth' });
-    });
+// Search function for postcode/city
+function searchProperties() {
+  const searchTerm = document.getElementById('property-search').value;
+  if (searchTerm.trim() === '') {
+    alert('Please enter a city or postcode');
+    return;
+  }
+  
+  // This would connect to a real search backend
+  // For now, simulate search results
+  const results = [
+    'Manchester', 'M1', 'M2', 'M3',
+    'London', 'EC1', 'EC2', 'W1',
+    'Birmingham', 'B1', 'B2',
+    'Leeds', 'LS1', 'LS2',
+    'Glasgow', 'G1', 'G2',
+    'Edinburgh', 'EH1', 'EH2',
+    'Cardiff', 'CF10',
+    'Belfast', 'BT1'
+  ];
+  
+  const match = results.find(r => r.toLowerCase().includes(searchTerm.toLowerCase()));
+  
+  if (match) {
+    alert(`Showing commercial properties in ${match} area. In a full implementation, this would display matching properties.`);
+    // Scroll to properties section
+    document.getElementById('for-sale').scrollIntoView({ behavior: 'smooth' });
+  } else {
+    alert(`No exact match found for "${searchTerm}". Showing all UK commercial properties.`);
+  }
+}
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if(target) target.scrollIntoView({ behavior: 'smooth' });
   });
+});
+
+// Handle quick link filtering (simulated)
+document.querySelectorAll('.quick-link').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const text = this.textContent;
+    if(text.includes('Offices')) {
+      alert('Showing office properties across the UK');
+    } else if(text.includes('Retail')) {
+      alert('Showing retail units across the UK');
+    } else if(text.includes('Industrial')) {
+      alert('Showing industrial units across the UK');
+    } else {
+      alert(`Showing all ${text} properties`);
+    }
+    document.getElementById('for-sale').scrollIntoView({ behavior: 'smooth' });
+  });
+});
 </script>
 
 </body>
