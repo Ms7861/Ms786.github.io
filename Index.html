@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coast to Coast Commercial · properties</title>
+  <!-- modern, professional feel -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f4f6fa;
+      color: #1e2b37;
+      line-height: 1.5;
+    }
+
+    /* smooth container */
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* header – deep navy, professional */
+    .site-header {
+      background: #0b2a3e;
+      color: white;
+      padding: 1.2rem 0;
+      border-bottom: 5px solid #c9a03d;
+      box-shadow: 0 6px 14px rgba(0,20,30,0.1);
+    }
+
+    .header-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 1rem;
+      font-weight: 400;
+      color: #d4b95a;
+      letter-spacing: 1px;
+    }
+
+    .contact-header {
+      background: #1f4b66;
+      padding: 0.7rem 1.8rem;
+      border-radius: 40px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      box-shadow: inset 0 0 0 1px #5790b0;
+    }
+
+    .contact-header a {
+      color: white;
+      text-decoration: none;
+      border-bottom: 1px dotted #b0d0e0;
+    }
+
+    /* main message */
+    .hero {
+      background: white;
+      margin: 2.5rem 0 2rem;
+      padding: 2.5rem 2.8rem;
+      border-radius: 32px;
+      box-shadow: 0 16px 32px -12px rgba(0,35,60,0.15);
+      border: 1px solid #e2edf5;
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      font-weight: 500;
+      color: #0b2a3e;
+      max-width: 900px;
+    }
+
+    .hero h2 strong {
+      color: #b8862c;
+      font-weight: 600;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      color: #2f4858;
+      margin: 1.2rem 0 1.5rem;
+    }
+
+    /* qr code card — business card ready */
+    .qr-section {
+      background: #ffffffec;
+      backdrop-filter: blur(4px);
+      border-radius: 2rem;
+      padding: 2rem 2.5rem;
+      margin: 2.2rem 0 2.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2.5rem;
+      border: 2px solid #c9a03d40;
+      box-shadow: 0 20px 30px -18px #1b3e55;
+    }
+
+    .qr-left {
+      flex: 1;
+      min-width: 240px;
+    }
+
+    .qr-left h3 {
+      font-size: 1.9rem;
+      font-weight: 550;
+      color: #003153;
+    }
+
+    .qr-left p {
+      font-size: 1.2rem;
+      margin: 0.5rem 0 0.3rem;
+    }
+
+    .qr-email {
+      background: #eef3f7;
+      padding: 0.7rem 1.5rem;
+      border-radius: 60px;
+      display: inline-block;
+      font-size: 1.2rem;
+      font-weight: 500;
+      border: 1px solid #b8cdde;
+    }
+
+    .qr-email a {
+      text-decoration: none;
+      color: #0a3144;
+    }
+
+    /* QR code mock (pure CSS with dummy pattern — replace with actual QR image) */
+    .qr-code-mock {
+      width: 140px;
+      height: 140px;
+      background: #111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 24px;
+      box-shadow: 0 10px 16px rgba(0,0,0,0.2);
+      border: 4px solid white;
+      outline: 2px solid #c9a03d;
+    }
+
+    .qr-inner {
+      width: 120px;
+      height: 120px;
+      background: repeating-linear-gradient(45deg, #fff 0px, #fff 8px, #000 8px, #000 16px);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 0.8rem;
+      color: #222;
+      text-align: center;
+      background-clip: border-box;
+    }
+    /* instruction overlay — replace with real QR code image later */
+    .qr-note {
+      font-size: 0.9rem;
+      color: #b8862c;
+      margin-top: 0.6rem;
+      font-weight: 500;
+    }
+
+    /* property sections – dropdown style cards */
+    .listings-section {
+      margin: 3rem 0 2rem;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 560;
+      color: #0b2a3e;
+      border-left: 8px solid #c9a03d;
+      padding-left: 1.5rem;
+      margin-bottom: 1.8rem;
+    }
+
+    /* dropdown (details/summary) styled as cards */
+    .property-group {
+      background: white;
+      border-radius: 24px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 8px 18px -10px #213e5040;
+      border: 1px solid #dbeaf2;
+      transition: 0.2s;
+    }
+
+    .property-group summary {
+      padding: 1.5rem 2rem;
+      font-size: 1.8rem;
+      font-weight: 520;
+      cursor: pointer;
+      list-style: none;  /* removes default triangle */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #003557;
+    }
+
+    .property-group summary::-webkit-details-marker {
+      display: none;  /* hide default triangle in webkit */
+    }
+
+    .property-group summary::after {
+      content: "➕";
+      font-size: 1.8rem;
+      color: #c49b3f;
+      transition: 0.2s;
+    }
+
+    .property-group[open] summary::after {
+      content: "➖";
+    }
+
+    /* inner content grid — cards for units */
+    .property-details {
+      padding: 0.5rem 2rem 2rem 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      border-top: 1px solid #c9dae9;
+    }
+
+    .unit-card {
+      background: #f5faff;
+      border-radius: 1.5rem;
+      padding: 1.5rem;
+      border-left: 6px solid #c9a03d;
+      box-shadow: 0 4px 10px #d7e2ed;
+    }
+
+    .unit-card h4 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #1d4357;
+      margin-bottom: 0.5rem;
+    }
+
+    .unit-card .type {
+      display: inline-block;
+      background: #c9a03d;
+      color: white;
+      padding: 0.2rem 1.2rem;
+      border-radius: 30px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+      margin-bottom: 1rem;
+    }
+
+    .unit-card p {
+      font-size: 1.1rem;
+      margin: 0.3rem 0;
+      color: #1e3f50;
+    }
+
+    .unit-card .price {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #0b2a3e;
+      margin: 0.8rem 0 0.2rem;
+    }
+
+    /* edit hint — for you to know where to add */
+    .edit-note {
+      background: #fcf2dd;
+      border-radius: 1rem;
+      padding: 0.6rem 1.5rem;
+      margin: 1rem 0 2rem;
+      font-size: 1.1rem;
+      color: #594521;
+      display: inline-block;
+      border-left: 6px solid #c9a03d;
+    }
+
+    /* footer contact */
+    .footer {
+      margin-top: 4rem;
+      background: #0f2d3f;
+      color: #e3eef5;
+      padding: 2rem 0;
+      border-radius: 3rem 3rem 0 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-email {
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+
+    .footer-email a {
+      color: #ffdc9f;
+      text-decoration: none;
+      border-bottom: 2px solid #c9a03d;
+    }
+
+    .footer-links a {
+      color: #bed9ec;
+      margin-left: 2rem;
+      text-decoration: none;
+    }
+
+    @media (max-width: 650px) {
+      .container { padding: 0 1.2rem; }
+      .hero h2 { font-size: 2rem; }
+      .qr-section { flex-direction: column; align-items: start; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-flex">
+    <div class="logo">
+      <h1>COAST TO COAST <br><span>COMMERCIAL</span></h1>
+    </div>
+    <div class="contact-header">
+      📧 <a href="mailto:info.coastocoastcommercial@gmail.com">info.coastocoastcommercial@gmail.com</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  
+  <!-- Hero / value prop -->
+  <div class="hero">
+    <h2>Advertise & manage <strong>commercial properties</strong> — for sale, lease, or management.</h2>
+    <p>Brokers, landlords, and companies list with us. Clean, professional, and built for growth.</p>
+  </div>
+
+  <!-- QR code block – for business cards (scan to website) -->
+  <div class="qr-section">
+    <div class="qr-left">
+      <h3>📱 scan for instant access</h3>
+      <p>Print this QR code on your business card — clients land directly on this page.</p>
+      <div class="qr-email">
+        <a href="mailto:info.coastocoastcommercial@gmail.com">📧 info.coastocoastcommercial@gmail.com</a>
+      </div>
+      <div class="qr-note">(replace mock QR with your actual code image)</div>
+    </div>
+    <div class="qr-code-mock">
+      <div class="qr-inner">YOUR<br>QR<br>CODE</div>
+    </div>
+  </div>
+
+  <!-- ===== DROPDOWN SECTIONS – edit properties here ===== -->
+  <section class="listings-section">
+    <h2 class="section-title">📌 current listings</h2>
+
+    <!-- UNITS FOR SALE dropdown -->
+    <details class="property-group" open>
+      <summary>🏢 units for sale</summary>
+      <div class="property-details">
+        <!-- each card = one property – duplicate or edit as needed -->
+        <div class="unit-card">
+          <h4>Downtown office</h4>
+          <span class="type">for sale</span>
+          <p>📍 1500 Main St, Suite 400</p>
+          <p>📐 3,200 sq ft · 12 offices</p>
+          <div class="price">$975,000</div>
+        </div>
+        <div class="unit-card">
+          <h4>Retail plaza</h4>
+          <span class="type">for sale</span>
+          <p>📍 8200 Coastal Hwy</p>
+          <p>📐 5,500 sq ft · 3 units</p>
+          <div class="price">$1,425,000</div>
+        </div>
+        <div class="unit-card">
+          <h4>Warehouse flex</h4>
+          <span class="type">for sale</span>
+          <p>📍 40 Industrial Dr</p>
+          <p>📐 8,700 sq ft · 2 docks</p>
+          <div class="price">$689,000</div>
+        </div>
+      </div>
+    </details>
+
+    <!-- UNITS FOR RENT dropdown -->
+    <details class="property-group" open>
+      <summary>🔑 units for rent / lease</summary>
+      <div class="property-details">
+        <div class="unit-card">
+          <h4>Medical suite</h4>
+          <span class="type">lease</span>
+          <p>📍 2200 Health Park Blvd</p>
+          <p>📐 1,800 sq ft · 5 exam rooms</p>
+          <div class="price">$4,200/mo</div>
+        </div>
+        <div class="unit-card">
+          <h4>Restaurant space</h4>
+          <span class="type">rent</span>
+          <p>📍 12 Harbor View</p>
+          <p>📐 2,200 sq ft · hood & bar</p>
+          <div class="price">$5,950/mo</div>
+        </div>
+        <div class="unit-card">
+          <h4>Industrial bay</h4>
+          <span class="type">lease</span>
+          <p>📍 99 Commerce Circle</p>
+          <p>📐 6,000 sq ft · drive-in</p>
+          <div class="price">$3,900/mo</div>
+        </div>
+      </div>
+    </details>
+
+    <!-- ADDITIONAL CATEGORY (example: parking / land) — you can copy, rename, or add more -->
+    <details class="property-group">
+      <summary>📋 other availabilities</summary>
+      <div class="property-details">
+        <div class="unit-card">
+          <h4>Development land</h4>
+          <span class="type">sale</span>
+          <p>📍 345 West End Ave</p>
+          <p>📐 2.4 acres · zoned commercial</p>
+          <div class="price">$395,000</div>
+        </div>
+        <div class="unit-card">
+          <h4>Parking lot (monthly)</h4>
+          <span class="type">rental</span>
+          <p>📍 88 Station St</p>
+          <p>📐 65 spaces · gated</p>
+          <div class="price">$2,200/mo</div>
+        </div>
+      </div>
+    </details>
+
+    <!-- instructions for you (light hint) -->
+    <div class="edit-note">
+      ✏️ <strong>how to edit:</strong> to add/edit properties, just change the text inside each .unit-card. To add a new dropdown, copy/paste a whole &lt;details&gt; block.
+    </div>
+  </section>
+
+  <!-- Quick contact reminder -->
+  <div style="background: white; border-radius: 2rem; padding: 2rem; margin: 2rem 0;">
+    <p style="font-size: 1.8rem; color: #003153;">📞 listing inquiry?<br> <span style="font-size: 1.4rem; font-weight: 400;">reach us at <strong>info.coastocoastcommercial@gmail.com</strong> — we’ll connect you with the right contact.</span></p>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-email">
+      <a href="mailto:info.coastocoastcommercial@gmail.com">info.coastocoastcommercial@gmail.com</a>
+    </div>
+    <div class="footer-links">
+      <a href="#">list a property</a>
+      <a href="#">management</a>
+      <a href="#">scan QR</a>
+    </div>
+  </div>
+  <div class="container" style="margin-top: 2rem; font-size: 0.95rem; opacity: 0.8;">
+    © coast to coast commercial — professional real estate services
+  </div>
+</footer>
+
+<!-- tiny note: replace the QR mock with your actual QR image (for business cards) -->
+<!-- simply get a real QR code for https://ms7861.github.io and set as background -->
+</body>
+</html>
