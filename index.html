@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Coast to Coast Commercial · property portal</title>
-  <!-- modern portal feel – inspired by Zoopla's clean layout -->
+  <title>Coast to Coast Commercial · UK Property Portal</title>
   <style>
     * {
       margin: 0;
@@ -13,41 +12,41 @@
     }
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background: #f5f7fb;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #f5f7fa;
       color: #1e2b3a;
       line-height: 1.5;
     }
 
-    /* main container with max width – mimics portal centering */
-    .portal {
+    /* main container */
+    .container {
       max-width: 1400px;
       margin: 0 auto;
       padding: 0 1rem;
     }
 
-    @media (min-width: 640px) {
-      .portal { padding: 0 2rem; }
+    @media (min-width: 768px) {
+      .container { padding: 0 2rem; }
     }
 
-    /* --- header with search bar (visual only) --- */
-    .top-bar {
-      background: #0b2a44;
+    /* header - Zoopla style navy */
+    .header {
+      background: #0b2b4a;
       color: white;
-      padding: 1.2rem 0;
-      border-bottom: 4px solid #c9a13b;
+      padding: 1rem 0;
+      border-bottom: 4px solid #d4a853;
     }
 
     .header-flex {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      align-items: center;
+      gap: 0.8rem;
     }
 
     @media (min-width: 768px) {
       .header-flex {
         flex-direction: row;
-        align-items: center;
         justify-content: space-between;
       }
     }
@@ -55,204 +54,245 @@
     .logo h1 {
       font-size: 2rem;
       font-weight: 600;
-      line-height: 1.2;
     }
+
     .logo span {
       display: block;
       font-size: 0.9rem;
       color: #d4b95a;
-      letter-spacing: 1px;
     }
 
-    .contact-email {
+    .header-contact {
       background: #1f4f6e;
       padding: 0.6rem 1.5rem;
       border-radius: 40px;
       font-size: 1rem;
-      white-space: nowrap;
-      border: 1px solid #5287a5;
     }
-    .contact-email a {
+
+    .header-contact a {
       color: white;
       text-decoration: none;
     }
 
-    /* search bar – static but looks like a portal */
-    .search-panel {
+    /* search bar - portal style */
+    .search-section {
       background: white;
       border-radius: 60px;
-      padding: 0.4rem;
+      margin: 2rem 0 1.5rem;
+      padding: 0.3rem;
       display: flex;
       flex-wrap: wrap;
-      box-shadow: 0 10px 25px -12px #0b2a4440;
-      border: 1px solid #dde3ed;
-      max-width: 700px;
-      margin: 1.8rem 0 0.8rem;
+      box-shadow: 0 10px 25px -12px #0b2b4a40;
+      border: 1px solid #e0e6ed;
     }
-    .search-panel input {
-      flex: 1 1 200px;
+
+    .search-input {
+      flex: 1 1 250px;
       border: none;
       padding: 1rem 1.8rem;
       font-size: 1rem;
       background: transparent;
       outline: none;
     }
-    .search-panel button {
-      background: #c9a13b;
+
+    .search-btn {
+      background: #d4a853;
       border: none;
       border-radius: 50px;
-      padding: 0.9rem 2.2rem;
+      padding: 0.9rem 2.5rem;
       color: white;
       font-weight: 600;
       font-size: 1rem;
-      cursor: default; /* non‑functional */
+      cursor: default;
       white-space: nowrap;
     }
 
-    /* hero message */
-    .hero-message {
-      margin: 2rem 0 1.5rem;
-    }
-    .hero-message h2 {
-      font-size: 2.2rem;
-      font-weight: 500;
-      color: #0b2a44;
-      max-width: 900px;
-    }
-    .hero-message strong {
-      color: #c2841a;
-      font-weight: 600;
-    }
-    .hero-message p {
-      font-size: 1.25rem;
-      color: #365f79;
-      margin: 0.5rem 0 0;
+    /* hero area */
+    .hero {
+      margin: 1.5rem 0;
     }
 
-    /* qr + stats row – portal style */
-    .insight-strip {
+    .hero h2 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      color: #0b2b4a;
+      max-width: 900px;
+    }
+
+    .hero h2 strong {
+      color: #b8862c;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #3a5b73;
+      margin: 0.8rem 0 0;
+    }
+
+    /* stats bar */
+    .stats-bar {
       background: white;
-      border-radius: 28px;
-      padding: 2rem 2rem;
-      margin: 2.5rem 0;
+      border-radius: 20px;
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       gap: 2rem;
-      box-shadow: 0 8px 20px -10px #c9a13b30;
-      border: 1px solid #e7eef6;
+      box-shadow: 0 4px 12px #e0e6ed;
     }
+
     .qr-mini {
       display: flex;
       align-items: center;
-      gap: 1.2rem;
-      flex-wrap: wrap;
+      gap: 1rem;
     }
+
     .qr-box {
-      width: 80px;
-      height: 80px;
+      width: 70px;
+      height: 70px;
       background: #1a2c3b;
-      border-radius: 18px;
+      border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
       border: 3px solid white;
-      outline: 2px solid #c9a13b;
+      outline: 2px solid #d4a853;
     }
+
     .qr-box div {
-      width: 65px;
-      height: 65px;
+      width: 55px;
+      height: 55px;
       background: repeating-linear-gradient(45deg, #fff 0px, #fff 5px, #000 5px, #000 10px);
-      border-radius: 12px;
+      border-radius: 10px;
       font-size: 0.6rem;
       display: flex;
       align-items: center;
       text-align: center;
-      color: #1a1a1a;
-      font-weight: bold;
     }
-    .qr-mini p {
-      font-size: 1.2rem;
-      font-weight: 500;
-    }
-    .stats {
+
+    .stats-numbers {
       display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
+      gap: 2rem;
       margin-left: auto;
+      flex-wrap: wrap;
     }
-    .stat-item {
+
+    .stat {
       text-align: center;
     }
-    .stat-number {
+
+    .stat-num {
       font-size: 1.8rem;
       font-weight: 600;
-      color: #0b2a44;
+      color: #0b2b4a;
     }
+
     .stat-label {
       color: #5b6f82;
       font-size: 0.9rem;
     }
 
-    /* market news / insights card (like Zoopla snippet) */
-    .news-card {
+    /* market update card */
+    .market-card {
       background: white;
       border-radius: 24px;
       padding: 2rem;
-      margin: 2rem 0 2.5rem;
-      border-left: 8px solid #c9a13b;
-      box-shadow: 0 8px 22px -14px #1e3b50;
-    }
-    .news-card h3 {
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: #0b2a44;
-      margin-bottom: 0.8rem;
-    }
-    .news-card p {
-      font-size: 1.2rem;
-      color: #2b5068;
-      margin-bottom: 1rem;
-    }
-    .news-meta {
-      display: flex;
-      gap: 1.2rem;
-      color: #777e8c;
-      font-size: 0.95rem;
+      margin: 2rem 0;
+      border-left: 8px solid #d4a853;
+      box-shadow: 0 4px 12px #e0e6ed;
     }
 
-    /* property sections – two‑tier grid */
+    .market-card h3 {
+      font-size: 1.8rem;
+      color: #0b2b4a;
+      margin-bottom: 0.8rem;
+    }
+
+    .market-card p {
+      font-size: 1.2rem;
+      color: #2b5068;
+    }
+
+    .market-meta {
+      display: flex;
+      gap: 2rem;
+      margin-top: 1rem;
+      color: #6b7f92;
+    }
+
+    /* section headers */
     .section-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      flex-wrap: wrap;
       margin: 2.5rem 0 1.2rem;
     }
+
     .section-header h2 {
       font-size: 2rem;
       font-weight: 600;
-      color: #0b2a44;
-      border-left: 8px solid #c9a13b;
+      color: #0b2b4a;
+      border-left: 8px solid #d4a853;
       padding-left: 1rem;
     }
+
     .section-link {
-      color: #c2841a;
-      font-weight: 500;
+      color: #b8862c;
       text-decoration: none;
+      font-weight: 500;
     }
 
-    /* property grid – perfect on all devices */
+    /* property dropdowns - exactly like Zoopla style categories */
+    .property-group {
+      background: white;
+      border-radius: 16px;
+      margin-bottom: 1.2rem;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+    }
+
+    .property-group summary {
+      padding: 1.5rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fafbfc;
+    }
+
+    .property-group summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .property-group summary::after {
+      content: "▼";
+      font-size: 1.2rem;
+      color: #d4a853;
+      transition: 0.2s;
+    }
+
+    .property-group[open] summary::after {
+      content: "▲";
+    }
+
+    /* property grid */
     .property-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 1.5rem;
+      gap: 1.2rem;
+      padding: 1.5rem;
     }
+
     @media (min-width: 600px) {
       .property-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
+
     @media (min-width: 1000px) {
       .property-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -261,51 +301,47 @@
 
     .property-card {
       background: white;
-      border-radius: 24px;
+      border-radius: 16px;
+      border: 1px solid #edf2f7;
       overflow: hidden;
-      box-shadow: 0 10px 22px -16px #253c4e;
-      transition: all 0.2s;
-      border: 1px solid #e4ecf5;
+      transition: 0.2s;
     }
+
     .property-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 26px -16px #c9a13b70;
+      box-shadow: 0 10px 20px -10px #d4a85380;
     }
 
     .card-img {
-      height: 180px;
+      height: 160px;
       background: #b9cfdf;
-      background-image: linear-gradient(145deg, #acc4d8, #d4e2f0);
+      background-image: linear-gradient(145deg, #d1dfeb, #e8f0f8);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #2b5570;
-      font-size: 1rem;
-      font-weight: 400;
-      text-transform: uppercase;
-      background-size: cover;
+      color: #1e3f5c;
     }
-    /* simulated image tags – you can replace with actual images later */
+
     .card-img span {
-      background: #0b2a44cc;
+      background: #0b2b4acc;
       color: white;
       padding: 0.3rem 1.5rem;
       border-radius: 40px;
       font-size: 0.8rem;
-      backdrop-filter: blur(4px);
     }
 
     .card-content {
-      padding: 1.5rem 1.2rem 1.5rem;
+      padding: 1.2rem;
     }
+
     .card-content h4 {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       font-weight: 600;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.2rem;
     }
+
     .card-badge {
       display: inline-block;
-      background: #c9a13b;
+      background: #d4a853;
       color: white;
       padding: 0.2rem 1rem;
       border-radius: 30px;
@@ -313,332 +349,388 @@
       font-weight: 600;
       margin-bottom: 0.8rem;
     }
+
     .card-details {
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
       color: #2b4b62;
-    }
-    .card-details span {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 1rem;
-    }
-    .card-price {
-      font-size: 1.7rem;
-      font-weight: 600;
-      color: #0b2a44;
-      margin: 1rem 0 0.2rem;
+      font-size: 0.95rem;
+      margin-bottom: 0.8rem;
     }
 
-    /* two column layout for extra content (portal style) */
+    .card-details div {
+      margin: 0.3rem 0;
+    }
+
+    .card-price {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #0b2b4a;
+    }
+
+    .card-price small {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #5b6f82;
+    }
+
+    /* two column layout */
     .two-col {
       display: grid;
       grid-template-columns: 1fr;
       gap: 2rem;
       margin: 3rem 0;
     }
+
     @media (min-width: 800px) {
       .two-col {
         grid-template-columns: 2fr 1fr;
       }
     }
 
-    .feature-card {
+    .feature-list {
       background: white;
       border-radius: 24px;
       padding: 2rem;
-    }
-    .feature-card h3 {
-      font-size: 1.8rem;
-      color: #0b2a44;
-      margin-bottom: 1rem;
-    }
-    .feature-list {
-      list-style: none;
-    }
-    .feature-list li {
-      padding: 0.6rem 0;
-      border-bottom: 1px solid #e4ecf5;
-      display: flex;
-      gap: 0.8rem;
-      font-size: 1.1rem;
+      border: 1px solid #e2e8f0;
     }
 
-    .contact-large {
-      background: #0b2a44;
+    .feature-list h3 {
+      font-size: 1.8rem;
+      color: #0b2b4a;
+      margin-bottom: 1.5rem;
+    }
+
+    .feature-item {
+      padding: 1rem 0;
+      border-bottom: 1px solid #e2e8f0;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .contact-panel {
+      background: #0b2b4a;
       color: white;
       border-radius: 24px;
       padding: 2rem;
     }
-    .contact-large h4 {
+
+    .contact-panel h3 {
       font-size: 2rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
-    .contact-large a {
+
+    .contact-panel a {
       color: #ffdb9f;
       font-size: 1.3rem;
       text-decoration: none;
       word-break: break-all;
+      display: block;
+      margin: 1rem 0;
     }
 
+    .qr-large {
+      background: #ffffff20;
+      border-radius: 16px;
+      padding: 1.5rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    /* footer */
     .footer {
-      background: #102c41;
-      color: #d4e0ec;
-      padding: 2.5rem 0;
-      margin-top: 3rem;
+      background: #0b2b4a;
+      color: white;
+      padding: 3rem 0 2rem;
+      margin-top: 4rem;
       border-radius: 3rem 3rem 0 0;
     }
+
     .footer-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 2rem;
     }
+
     .footer-col p {
       font-weight: 600;
       margin-bottom: 1rem;
-      color: white;
+      color: #d4a853;
     }
+
     .footer-col a {
-      display: block;
       color: #b8d0e0;
       text-decoration: none;
+      display: block;
       margin-bottom: 0.5rem;
-      font-size: 0.95rem;
     }
+
     .copyright {
       text-align: center;
       margin-top: 3rem;
-      font-size: 0.9rem;
-      opacity: 0.7;
-    }
-
-    /* mobile landscape fine‑tuning */
-    @media (max-width: 800px) and (orientation: landscape) {
-      .property-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .hero-message h2 {
-        font-size: 1.8rem;
-      }
+      color: #9ab0c4;
     }
   </style>
 </head>
 <body>
-  <!-- header with email / logo -->
-  <div class="top-bar">
-    <div class="portal header-flex">
-      <div class="logo">
-        <h1>COAST TO COAST <span>COMMERCIAL</span></h1>
+
+<header class="header">
+  <div class="container header-flex">
+    <div class="logo">
+      <h1>COAST TO COAST <span>COMMERCIAL</span></h1>
+    </div>
+    <div class="header-contact">
+      📧 <a href="mailto:info.coastocoastcommercial@gmail.com">info.coastocoastcommercial@gmail.com</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  
+  <!-- search bar - Zoopla style -->
+  <div class="search-section">
+    <input class="search-input" type="text" placeholder="Search commercial properties, town, city or postcode..." value="United Kingdom">
+    <button class="search-btn">🔍 Search</button>
+  </div>
+
+  <!-- hero -->
+  <div class="hero">
+    <h2>Commercial property to <strong>buy, rent or manage</strong> across the UK</h2>
+    <p>Browse offices, retail spaces, industrial units and development opportunities nationwide</p>
+  </div>
+
+  <!-- stats with QR -->
+  <div class="stats-bar">
+    <div class="qr-mini">
+      <div class="qr-box">
+        <div>YOUR QR</div>
       </div>
-      <div class="contact-email">
-        📧 <a href="mailto:info.coastocoastcommercial@gmail.com">info.coastocoastcommercial@gmail.com</a>
+      <p>Scan for <br>instant access</p>
+    </div>
+    <div class="stats-numbers">
+      <div class="stat">
+        <div class="stat-num">£42M</div>
+        <div class="stat-label">portfolio value</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">28</div>
+        <div class="stat-label">active listings</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">95%</div>
+        <div class="stat-label">occupancy</div>
       </div>
     </div>
   </div>
 
-  <main class="portal">
-    <!-- fake search bar – portal look -->
-    <div class="search-panel">
-      <input type="text" placeholder="Search commercial properties, city or postcode..." value="commercial UK">
-      <button>🔍 Search</button>
+  <!-- market update -->
+  <div class="market-card">
+    <h3>📈 UK Commercial Market Update 2026</h3>
+    <p>Demand for industrial space up 12% year-on-year. Retail showing first signs of recovery since 2022. Prime yields stabilising across South East.</p>
+    <div class="market-meta">
+      <span>🏷️ Market insight</span>
+      <span>📅 22 February 2026</span>
     </div>
+  </div>
 
-    <!-- hero -->
-    <div class="hero-message">
-      <h2>Commercial property to <strong>buy, rent or manage</strong> — nationwide</h2>
-      <p>Brokers, landlords and companies: list with us. Clear insight, prime visibility.</p>
-    </div>
-
-    <!-- QR + mini stats – clean portal row -->
-    <div class="insight-strip">
-      <div class="qr-mini">
-        <div class="qr-box">
-          <div>YOUR QR</div>
-        </div>
-        <p>Scan for instant access <br><span style="font-size:0.9rem; color:#3a5b73;">business card ready</span></p>
-      </div>
-      <div class="stats">
-        <div class="stat-item">
-          <div class="stat-number">15+</div>
-          <div class="stat-label">active listings</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">£42M</div>
-          <div class="stat-label">portfolio value</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">95%</div>
-          <div class="stat-label">occupancy rate</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- News / market snapshot – like Zoopla snippet -->
-    <div class="news-card">
-      <h3>📈 Commercial market update — 2026</h3>
-      <p>Demand for industrial space rises 12% as supply stabilises. Retail enquiries up for the first time in 3 years. “Buyers are back, but selective” – Coast to Coast insight.</p>
-      <div class="news-meta">
-        <span>📅 22 February 2026</span>
-        <span>🏷️ 4 min read</span>
-      </div>
-    </div>
-
-    <!-- Units for sale section -->
+  <!-- property dropdowns - Zoopla style categories -->
+  <section>
     <div class="section-header">
-      <h2>🏢 units for sale</h2>
-      <a href="#" class="section-link">view all →</a>
+      <h2>Property listings</h2>
+      <a href="#" class="section-link">View all →</a>
     </div>
-    <div class="property-grid">
-      <!-- card 1 -->
-      <div class="property-card">
-        <div class="card-img"><span>downtown</span></div>
-        <div class="card-content">
-          <h4>Downtown office</h4>
-          <span class="card-badge">for sale</span>
-          <div class="card-details">
-            <span>📍 1500 Main St, Suite 400</span>
-            <span>📐 3,200 sq ft · 12 offices</span>
+
+    <!-- units for sale dropdown -->
+    <details class="property-group" open>
+      <summary>🏢 Units for sale</summary>
+      <div class="property-grid">
+        <div class="property-card">
+          <div class="card-img"><span>Manchester</span></div>
+          <div class="card-content">
+            <h4>City Centre Office</h4>
+            <span class="card-badge">For sale</span>
+            <div class="card-details">
+              <div>📍 42 Deansgate, Manchester M3</div>
+              <div>📐 3,200 sq ft · 12 offices</div>
+            </div>
+            <div class="card-price">£975,000</div>
           </div>
-          <div class="card-price">$975,000</div>
+        </div>
+        <div class="property-card">
+          <div class="card-img"><span>Birmingham</span></div>
+          <div class="card-content">
+            <h4>Retail Parade</h4>
+            <span class="card-badge">For sale</span>
+            <div class="card-details">
+              <div>📍 88 Bull Ring, Birmingham B5</div>
+              <div>📐 5,500 sq ft · 3 units</div>
+            </div>
+            <div class="card-price">£1,425,000</div>
+          </div>
+        </div>
+        <div class="property-card">
+          <div class="card-img"><span>Leeds</span></div>
+          <div class="card-content">
+            <h4>Industrial Warehouse</h4>
+            <span class="card-badge">For sale</span>
+            <div class="card-details">
+              <div>📍 15 Industrial Estate, Leeds LS10</div>
+              <div>📐 8,700 sq ft · 2 docks</div>
+            </div>
+            <div class="card-price">£689,000</div>
+          </div>
         </div>
       </div>
-      <!-- card 2 -->
-      <div class="property-card">
-        <div class="card-img"><span>retail plaza</span></div>
-        <div class="card-content">
-          <h4>Retail plaza</h4>
-          <span class="card-badge">for sale</span>
-          <div class="card-details">
-            <span>📍 8200 Coastal Hwy</span>
-            <span>📐 5,500 sq ft · 3 units</span>
+    </details>
+
+    <!-- units for rent dropdown -->
+    <details class="property-group" open>
+      <summary>🔑 Units to rent</summary>
+      <div class="property-grid">
+        <div class="property-card">
+          <div class="card-img"><span>London</span></div>
+          <div class="card-content">
+            <h4>Medical Suite</h4>
+            <span class="card-badge">To rent</span>
+            <div class="card-details">
+              <div>📍 220 Harley Street, London W1</div>
+              <div>📐 1,800 sq ft · 5 rooms</div>
+            </div>
+            <div class="card-price">£4,200<span style="font-size:1rem;"> pcm</span></div>
           </div>
-          <div class="card-price">$1.42M</div>
+        </div>
+        <div class="property-card">
+          <div class="card-img"><span>Brighton</span></div>
+          <div class="card-content">
+            <h4>Restaurant Space</h4>
+            <span class="card-badge">To rent</span>
+            <div class="card-details">
+              <div>📍 12 The Lanes, Brighton BN1</div>
+              <div>📐 2,200 sq ft · full kitchen</div>
+            </div>
+            <div class="card-price">£5,950<span style="font-size:1rem;"> pcm</span></div>
+          </div>
+        </div>
+        <div class="property-card">
+          <div class="card-img"><span>Bristol</span></div>
+          <div class="card-content">
+            <h4>Industrial Unit</h4>
+            <span class="card-badge">To rent</span>
+            <div class="card-details">
+              <div>📍 99 Commerce Park, Bristol BS2</div>
+              <div>📐 6,000 sq ft · drive-in</div>
+            </div>
+            <div class="card-price">£3,900<span style="font-size:1rem;"> pcm</span></div>
+          </div>
         </div>
       </div>
-      <!-- card 3 -->
-      <div class="property-card">
-        <div class="card-img"><span>warehouse</span></div>
-        <div class="card-content">
-          <h4>Warehouse flex</h4>
-          <span class="card-badge">for sale</span>
-          <div class="card-details">
-            <span>📍 40 Industrial Dr</span>
-            <span>📐 8,700 sq ft · 2 docks</span>
+    </details>
+
+    <!-- other opportunities dropdown -->
+    <details class="property-group">
+      <summary>📋 Development & land</summary>
+      <div class="property-grid">
+        <div class="property-card">
+          <div class="card-img"><span>Surrey</span></div>
+          <div class="card-content">
+            <h4>Development Land</h4>
+            <span class="card-badge">For sale</span>
+            <div class="card-details">
+              <div>📍 345 London Road, Surrey KT</div>
+              <div>📐 2.4 acres · planning consent</div>
+            </div>
+            <div class="card-price">£395,000</div>
           </div>
-          <div class="card-price">$689,000</div>
         </div>
+        <div class="property-card">
+          <div class="card-img"><span>Manchester</span></div>
+          <div class="card-content">
+            <h4>Car Park Investment</h4>
+            <span class="card-badge">Investment</span>
+            <div class="card-details">
+              <div>📍 88 Station Approach, Manchester</div>
+              <div>📐 65 spaces · long leasehold</div>
+            </div>
+            <div class="card-price">£2,200<span style="font-size:1rem;"> pcm income</span></div>
+          </div>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- two column section -->
+  <div class="two-col">
+    <div class="feature-list">
+      <h3>Popular locations</h3>
+      <div class="feature-item">
+        <span>📍</span> London · 12 commercial properties
+      </div>
+      <div class="feature-item">
+        <span>📍</span> Manchester · 8 commercial properties
+      </div>
+      <div class="feature-item">
+        <span>📍</span> Birmingham · 6 commercial properties
+      </div>
+      <div class="feature-item">
+        <span>📍</span> Leeds · 5 commercial properties
+      </div>
+      <div class="feature-item">
+        <span>📍</span> Bristol · 4 commercial properties
       </div>
     </div>
 
-    <!-- Units for rent / lease -->
-    <div class="section-header">
-      <h2>🔑 units for rent / lease</h2>
-      <a href="#" class="section-link">view all →</a>
-    </div>
-    <div class="property-grid">
-      <div class="property-card">
-        <div class="card-img"><span>medical</span></div>
-        <div class="card-content">
-          <h4>Medical suite</h4>
-          <span class="card-badge">lease</span>
-          <div class="card-details">
-            <span>📍 2200 Health Park Blvd</span>
-            <span>📐 1,800 sq ft · 5 exam rooms</span>
-          </div>
-          <div class="card-price">$4,200/mo</div>
-        </div>
-      </div>
-      <div class="property-card">
-        <div class="card-img"><span>restaurant</span></div>
-        <div class="card-content">
-          <h4>Restaurant space</h4>
-          <span class="card-badge">rent</span>
-          <div class="card-details">
-            <span>📍 12 Harbor View</span>
-            <span>📐 2,200 sq ft · hood & bar</span>
-          </div>
-          <div class="card-price">$5,950/mo</div>
-        </div>
-      </div>
-      <div class="property-card">
-        <div class="card-img"><span>industrial</span></div>
-        <div class="card-content">
-          <h4>Industrial bay</h4>
-          <span class="card-badge">lease</span>
-          <div class="card-details">
-            <span>📍 99 Commerce Circle</span>
-            <span>📐 6,000 sq ft · drive-in</span>
-          </div>
-          <div class="card-price">$3,900/mo</div>
-        </div>
+    <div class="contact-panel">
+      <h3>📞 Listing inquiry</h3>
+      <p>Contact our commercial team:</p>
+      <a href="mailto:info.coastocoastcommercial@gmail.com">info.coastocoastcommercial@gmail.com</a>
+      <div class="qr-large">
+        📱 Scan business card QR for instant access
       </div>
     </div>
+  </div>
 
-    <!-- other availabilities + market insight two‑column -->
-    <div class="two-col">
-      <!-- left: other availabilities -->
-      <div class="feature-card">
-        <h3>📋 other availabilities</h3>
-        <ul class="feature-list">
-          <li><span>📌</span> <strong>Development land</strong> — 345 West End Ave · 2.4 acres · $395,000</li>
-          <li><span>📌</span> <strong>Parking lot (monthly)</strong> — 88 Station St · 65 spaces · $2,200/mo</li>
-          <li><span>📌</span> <strong>High street retail</strong> — 22 Market St · 1,800 sq ft · $3,250/mo</li>
-          <li><span>📌</span> <strong>Office share</strong> — 500 Bay Rd · 6 desks · $750/mo</li>
-        </ul>
-      </div>
-      <!-- right: contact / listing inquiry -->
-      <div class="contact-large">
-        <h4>📞 listing inquiry?</h4>
-        <p style="margin:1rem 0; font-size:1.2rem;">Reach us direct — we'll connect you with the right contact.</p>
-        <a href="mailto:info.coastocoastcommercial@gmail.com">info.coastocoastcommercial@gmail.com</a>
-        <div style="margin-top:2rem;">
-          <div style="background:#ffffff20; border-radius:60px; padding:0.8rem; text-align:center;">
-            📱 scan QR from any card
-          </div>
-        </div>
-      </div>
+  <!-- featured agents / brands -->
+  <div style="background: white; border-radius: 24px; padding: 2rem; margin: 2rem 0; text-align: center;">
+    <p style="color: #6b7f92; margin-bottom: 1rem;">Trusted by commercial agents across the UK</p>
+    <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; color: #0b2b4a; font-weight: 500;">
+      <span>RIGHTMOVE COMMERCIAL</span>
+      <span>ZPG</span>
+      <span>ONTARIO</span>
+      <span>PRIME COMMERCIAL</span>
     </div>
+  </div>
+</main>
 
-    <!-- subtle extra stats / disclaimer -->
-    <div style="background: #e9f0f7; border-radius: 30px; padding: 1.5rem 2rem; margin: 2rem 0; font-size:1rem; color:#264e67;">
-      ⓘ 2026 market data: 15.2M commercial properties tracked. Rent growth stabilises at 2.2%. Source: Coast to Coast insight.
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p>Coast to Coast</p>
+        <a href="#">About us</a>
+        <a href="#">Contact</a>
+        <a href="#">List a property</a>
+      </div>
+      <div class="footer-col">
+        <p>Services</p>
+        <a href="#">Commercial sales</a>
+        <a href="#">Property management</a>
+        <a href="#">Landlord services</a>
+      </div>
+      <div class="footer-col">
+        <p>Resources</p>
+        <a href="#">Market news</a>
+        <a href="#">Valuation</a>
+        <a href="#">QR code access</a>
+      </div>
+      <div class="footer-col">
+        <p>Contact</p>
+        <a href="mailto:info.coastocoastcommercial@gmail.com">Email us</a>
+        <a href="#">Business card QR</a>
+      </div>
     </div>
-  </main>
+    <div class="copyright">
+      © Coast to Coast Commercial 2026 · Professional real estate services UK
+    </div>
+  </div>
+</footer>
 
-  <!-- footer with portal style links -->
-  <footer class="footer">
-    <div class="portal">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <p>Coast to Coast</p>
-          <a href="#">about us</a>
-          <a href="#">contact</a>
-          <a href="#">list a property</a>
-        </div>
-        <div class="footer-col">
-          <p>services</p>
-          <a href="#">commercial sales</a>
-          <a href="#">property management</a>
-          <a href="#">landlord advice</a>
-        </div>
-        <div class="footer-col">
-          <p>resources</p>
-          <a href="#">market news</a>
-          <a href="#">valuation tool</a>
-          <a href="#">QR code access</a>
-        </div>
-        <div class="footer-col">
-          <p>contact</p>
-          <a href="mailto:info.coastocoastcommercial@gmail.com">📧 email us</a>
-          <a href="#">📱 business card QR</a>
-        </div>
-      </div>
-      <div class="copyright">
-        © coast to coast commercial — professional real estate services. All imagery indicative.
-      </div>
-    </div>
-  </footer>
 </body>
 </html>
