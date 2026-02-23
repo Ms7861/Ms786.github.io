@@ -12,17 +12,17 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
       background: #ffffff;
       color: #222529;
       line-height: 1.5;
     }
 
-    /* Header */
+    /* Black and white header with different font */
     .top-header {
-      background: #ffffff;
-      border-bottom: 1px solid #e6e9ed;
-      padding: 0.8rem 0;
+      background: #000000;
+      border-bottom: 2px solid #ffffff;
+      padding: 1rem 0;
       position: sticky;
       top: 0;
       z-index: 100;
@@ -43,15 +43,18 @@
     }
 
     .logo h1 {
-      font-size: 1.8rem;
-      color: #0a2b4a;
-      font-weight: 700;
+      font-size: 2rem;
+      color: #ffffff;
+      font-weight: 800;
+      font-family: 'Impact', 'Arial Black', 'Helvetica Bold', sans-serif;
+      letter-spacing: 1px;
     }
 
     .logo span {
       font-size: 0.9rem;
-      color: #6f7d8c;
+      color: #cccccc;
       display: block;
+      font-family: 'Segoe UI', Arial, sans-serif;
     }
 
     .nav {
@@ -61,14 +64,15 @@
     }
 
     .nav a {
-      color: #222529;
+      color: #ffffff;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
       cursor: pointer;
+      font-family: 'Segoe UI', Arial, sans-serif;
     }
 
     .nav a:hover {
-      color: #2a6ebb;
+      color: #cccccc;
     }
 
     /* Hero search */
@@ -82,13 +86,13 @@
       font-size: 2.5rem;
       font-weight: 600;
       margin-bottom: 2rem;
-      color: #0a2b4a;
+      color: #000000;
     }
 
     .search-wrapper {
       background: white;
       border-radius: 60px;
-      border: 2px solid #e6e9ed;
+      border: 2px solid #000000;
       display: flex;
       width: 100%;
       max-width: 800px;
@@ -105,7 +109,7 @@
     }
 
     .search-btn {
-      background: #0a2b4a;
+      background: #000000;
       color: white;
       border: none;
       padding: 0 2.5rem;
@@ -115,7 +119,7 @@
     }
 
     .search-btn:hover {
-      background: #123b60;
+      background: #333333;
     }
 
     .search-hint {
@@ -124,7 +128,7 @@
       margin-top: 0.5rem;
     }
 
-    /* Quick property type links */
+    /* Property type links */
     .property-type-links {
       display: flex;
       gap: 2rem;
@@ -135,15 +139,16 @@
     }
 
     .property-type-link {
-      color: #0a2b4a;
+      color: #000000;
       text-decoration: none;
       font-weight: 600;
       padding: 0.5rem 0;
       border-bottom: 3px solid transparent;
+      cursor: pointer;
     }
 
     .property-type-link:hover {
-      border-bottom-color: #0a2b4a;
+      border-bottom-color: #000000;
     }
 
     /* Section headers */
@@ -153,8 +158,8 @@
 
     .section-header h2 {
       font-size: 2rem;
-      color: #0a2b4a;
-      font-weight: 600;
+      color: #000000;
+      font-weight: 700;
     }
 
     .section-header p {
@@ -205,7 +210,7 @@
       position: absolute;
       top: 1rem;
       left: 1rem;
-      background: #0a2b4a;
+      background: #000000;
       color: white;
       padding: 0.3rem 1rem;
       border-radius: 30px;
@@ -220,7 +225,7 @@
     .price {
       font-size: 1.8rem;
       font-weight: 700;
-      color: #0a2b4a;
+      color: #000000;
       margin-bottom: 0.5rem;
     }
 
@@ -228,6 +233,7 @@
       font-size: 1.2rem;
       font-weight: 600;
       margin-bottom: 0.5rem;
+      color: #000000;
     }
 
     .details {
@@ -244,7 +250,7 @@
       padding-top: 1rem;
     }
 
-    /* UK Cities Grid - Comprehensive */
+    /* UK Cities Grid */
     .cities-section {
       background: #f8faff;
       padding: 3rem 0;
@@ -286,13 +292,13 @@
     }
 
     .city-card:hover {
-      border-color: #0a2b4a;
-      box-shadow: 0 4px 12px rgba(10,43,74,0.1);
+      border-color: #000000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     .city-name {
       font-weight: 600;
-      color: #0a2b4a;
+      color: #000000;
     }
 
     .city-count {
@@ -321,9 +327,10 @@
     }
 
     .about-text h3 {
-      color: #0a2b4a;
+      color: #000000;
       font-size: 1.8rem;
       margin-bottom: 1.5rem;
+      font-weight: 700;
     }
 
     .about-text p {
@@ -333,7 +340,7 @@
     }
 
     .contact-info {
-      background: #0a2b4a;
+      background: #000000;
       color: white;
       padding: 2rem;
       border-radius: 12px;
@@ -342,11 +349,11 @@
     .contact-info h4 {
       font-size: 1.5rem;
       margin-bottom: 1rem;
-      color: #ffdb9f;
+      color: #ffffff;
     }
 
     .contact-info a {
-      color: white;
+      color: #ffffff;
       text-decoration: none;
       display: block;
       margin: 1rem 0;
@@ -354,7 +361,7 @@
     }
 
     .contact-info a:hover {
-      color: #ffdb9f;
+      color: #cccccc;
     }
 
     /* Legal Section */
@@ -384,9 +391,10 @@
     }
 
     .legal-card h4 {
-      color: #0a2b4a;
+      color: #000000;
       margin-bottom: 1rem;
       font-size: 1.3rem;
+      font-weight: 700;
     }
 
     .legal-card p {
@@ -402,10 +410,10 @@
       font-size: 0.9rem;
     }
 
-    /* Footer */
+    /* Black and white footer with different font */
     .footer {
-      background: #0a2b4a;
-      color: white;
+      background: #000000;
+      color: #ffffff;
       padding: 3rem 0 2rem;
     }
 
@@ -423,46 +431,58 @@
 
     .footer-col h4 {
       margin-bottom: 1.2rem;
-      color: #ffdb9f;
+      color: #ffffff;
+      font-size: 1.2rem;
+      font-weight: 700;
+      font-family: 'Impact', 'Arial Black', sans-serif;
+      letter-spacing: 0.5px;
     }
 
     .footer-col a {
-      color: #b8d0e0;
+      color: #cccccc;
       text-decoration: none;
       display: block;
       margin-bottom: 0.8rem;
       cursor: pointer;
+      font-family: 'Segoe UI', Arial, sans-serif;
     }
 
     .footer-col a:hover {
-      color: white;
+      color: #ffffff;
     }
 
     .copyright {
       text-align: center;
       margin-top: 3rem;
       padding-top: 2rem;
-      border-top: 1px solid #1f4f6e;
-      color: #9ab0c4;
+      border-top: 1px solid #333333;
+      color: #999999;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    /* Search results highlight */
+    .highlight {
+      background-color: #ffffcc;
+      transition: background-color 0.5s;
     }
   </style>
 </head>
 <body>
 
-<!-- Header -->
+<!-- Black and white header - Est. 2025 removed -->
 <div class="top-header">
   <div class="container header-flex">
     <div class="logo">
       <h1>COAST TO COAST</h1>
-      <span>Commercial · Est. 2025</span>
+      <span>COMMERCIAL</span>
     </div>
     <div class="nav">
-      <a onclick="scrollToSection('for-sale')">For sale</a>
-      <a onclick="scrollToSection('to-rent')">To rent</a>
-      <a onclick="scrollToSection('cities')">Locations</a>
-      <a onclick="scrollToSection('about')">About</a>
-      <a onclick="scrollToSection('legal')">Legal</a>
-      <a onclick="scrollToSection('contact')">Contact</a>
+      <a onclick="scrollToSection('for-sale')">FOR SALE</a>
+      <a onclick="scrollToSection('to-rent')">TO RENT</a>
+      <a onclick="scrollToSection('cities')">LOCATIONS</a>
+      <a onclick="scrollToSection('about')">ABOUT</a>
+      <a onclick="scrollToSection('legal')">LEGAL</a>
+      <a onclick="scrollToSection('contact')">CONTACT</a>
     </div>
   </div>
 </div>
@@ -474,18 +494,18 @@
     
     <div class="search-wrapper">
       <input class="search-input" id="searchInput" type="text" placeholder="Enter city, postcode or area (e.g. Manchester, M1, Leeds, Glasgow)">
-      <button class="search-btn" onclick="searchProperties()">Search</button>
+      <button class="search-btn" onclick="searchProperties()">SEARCH</button>
     </div>
     <div class="search-hint">
-      🔍 Search by city, town or UK postcode (e.g. London, M1, B1, EH1, CF10, BT1)
+      🔍 Try: Manchester, London, M1, B1, EH1, CF10, BT1, Glasgow, Leeds, Birmingham
     </div>
 
     <div class="property-type-links">
-      <a class="property-type-link" onclick="filterProperties('office')">Offices</a>
-      <a class="property-type-link" onclick="filterProperties('retail')">Retail</a>
-      <a class="property-type-link" onclick="filterProperties('industrial')">Industrial</a>
-      <a class="property-type-link" onclick="filterProperties('land')">Development Land</a>
-      <a class="property-type-link" onclick="filterProperties('all')">All Properties</a>
+      <a class="property-type-link" onclick="filterProperties('office')">OFFICES</a>
+      <a class="property-type-link" onclick="filterProperties('retail')">RETAIL</a>
+      <a class="property-type-link" onclick="filterProperties('industrial')">INDUSTRIAL</a>
+      <a class="property-type-link" onclick="filterProperties('land')">DEVELOPMENT LAND</a>
+      <a class="property-type-link" onclick="filterProperties('all')">ALL PROPERTIES</a>
     </div>
   </div>
 </div>
@@ -494,15 +514,15 @@
 
   <!-- For Sale Section -->
   <div id="for-sale" class="section-header">
-    <h2>🏢 Commercial properties for sale</h2>
+    <h2>🏢 COMMERCIAL PROPERTIES FOR SALE</h2>
     <p>Freehold and leasehold opportunities across the UK</p>
   </div>
 
   <div class="property-grid" id="saleProperties">
     <!-- London -->
-    <div class="property-card" data-type="office">
+    <div class="property-card" data-type="office" data-city="London" data-postcode="E14">
       <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&auto=format&fit=crop')">
-        <span class="card-badge">For sale</span>
+        <span class="card-badge">FOR SALE</span>
       </div>
       <div class="card-content">
         <div class="price">£2,450,000</div>
@@ -513,9 +533,9 @@
     </div>
 
     <!-- Manchester -->
-    <div class="property-card" data-type="office">
+    <div class="property-card" data-type="office" data-city="Manchester" data-postcode="M3">
       <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600&auto=format&fit=crop')">
-        <span class="card-badge">For sale</span>
+        <span class="card-badge">FOR SALE</span>
       </div>
       <div class="card-content">
         <div class="price">£975,000</div>
@@ -526,9 +546,9 @@
     </div>
 
     <!-- Birmingham -->
-    <div class="property-card" data-type="retail">
+    <div class="property-card" data-type="retail" data-city="Birmingham" data-postcode="B5">
       <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?w=600&auto=format&fit=crop')">
-        <span class="card-badge">For sale</span>
+        <span class="card-badge">FOR SALE</span>
       </div>
       <div class="card-content">
         <div class="price">£1,425,000</div>
@@ -539,9 +559,9 @@
     </div>
 
     <!-- Leeds -->
-    <div class="property-card" data-type="industrial">
+    <div class="property-card" data-type="industrial" data-city="Leeds" data-postcode="LS10">
       <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&auto=format&fit=crop')">
-        <span class="card-badge">For sale</span>
+        <span class="card-badge">FOR SALE</span>
       </div>
       <div class="card-content">
         <div class="price">£689,000</div>
@@ -552,9 +572,9 @@
     </div>
 
     <!-- Glasgow -->
-    <div class="property-card" data-type="office">
+    <div class="property-card" data-type="office" data-city="Glasgow" data-postcode="G2">
       <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1572021333549-63a8bdc8c8d7?w=600&auto=format&fit=crop')">
-        <span class="card-badge">For sale</span>
+        <span class="card-badge">FOR SALE</span>
       </div>
       <div class="card-content">
         <div class="price">£895,000</div>
@@ -565,9 +585,9 @@
     </div>
 
     <!-- Cardiff -->
-    <div class="property-card" data-type="retail">
+    <div class="property-card" data-type="retail" data-city="Cardiff" data-postcode="CF10">
       <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&auto=format&fit=crop')">
-        <span class="card-badge">For sale</span>
+        <span class="card-badge">FOR SALE</span>
       </div>
       <div class="card-content">
         <div class="price">£795,000</div>
@@ -580,15 +600,15 @@
 
   <!-- To Rent Section -->
   <div id="to-rent" class="section-header">
-    <h2>🔑 Commercial properties to rent</h2>
+    <h2>🔑 COMMERCIAL PROPERTIES TO RENT</h2>
     <p>Flexible lease terms available nationwide</p>
   </div>
 
   <div class="property-grid" id="rentProperties">
     <!-- London -->
-    <div class="property-card" data-type="office">
+    <div class="property-card" data-type="office" data-city="London" data-postcode="W1">
       <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1584132915807-fd1f5fbc078f?w=600&auto=format&fit=crop')">
-        <span class="card-badge">To rent</span>
+        <span class="card-badge">TO RENT</span>
       </div>
       <div class="card-content">
         <div class="price">£4,200 <span style="font-size: 1rem;">pcm</span></div>
@@ -599,9 +619,9 @@
     </div>
 
     <!-- Brighton -->
-    <div class="property-card" data-type="retail">
+    <div class="property-card" data-type="retail" data-city="Brighton" data-postcode="BN1">
       <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1555992336-fb0d29498b7f?w=600&auto=format&fit=crop')">
-        <span class="card-badge">To rent</span>
+        <span class="card-badge">TO RENT</span>
       </div>
       <div class="card-content">
         <div class="price">£5,950 <span style="font-size: 1rem;">pcm</span></div>
@@ -612,9 +632,9 @@
     </div>
 
     <!-- Bristol -->
-    <div class="property-card" data-type="industrial">
+    <div class="property-card" data-type="industrial" data-city="Bristol" data-postcode="BS2">
       <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1565514158740-064f34bd6cf0?w=600&auto=format&fit=crop')">
-        <span class="card-badge">To rent</span>
+        <span class="card-badge">TO RENT</span>
       </div>
       <div class="card-content">
         <div class="price">£3,900 <span style="font-size: 1rem;">pcm</span></div>
@@ -625,9 +645,9 @@
     </div>
 
     <!-- Edinburgh -->
-    <div class="property-card" data-type="office">
+    <div class="property-card" data-type="office" data-city="Edinburgh" data-postcode="EH2">
       <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&auto=format&fit=crop')">
-        <span class="card-badge">To rent</span>
+        <span class="card-badge">TO RENT</span>
       </div>
       <div class="card-content">
         <div class="price">£3,500 <span style="font-size: 1rem;">pcm</span></div>
@@ -638,9 +658,9 @@
     </div>
 
     <!-- Belfast -->
-    <div class="property-card" data-type="retail">
+    <div class="property-card" data-type="retail" data-city="Belfast" data-postcode="BT1">
       <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1519567241046-7f570eee3ce6?w=600&auto=format&fit=crop')">
-        <span class="card-badge">To rent</span>
+        <span class="card-badge">TO RENT</span>
       </div>
       <div class="card-content">
         <div class="price">£2,800 <span style="font-size: 1rem;">pcm</span></div>
@@ -651,9 +671,9 @@
     </div>
 
     <!-- Newcastle -->
-    <div class="property-card" data-type="office">
+    <div class="property-card" data-type="office" data-city="Newcastle" data-postcode="NE1">
       <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1497366858526-0766cadbe8fa?w=600&auto=format&fit=crop')">
-        <span class="card-badge">To rent</span>
+        <span class="card-badge">TO RENT</span>
       </div>
       <div class="card-content">
         <div class="price">£2,200 <span style="font-size: 1rem;">pcm</span></div>
@@ -669,57 +689,49 @@
 <div id="cities" class="cities-section">
   <div class="container">
     <div class="section-header">
-      <h2>📍 UK commercial property locations</h2>
+      <h2>📍 UK COMMERCIAL PROPERTY LOCATIONS</h2>
       <p>Search commercial properties in over 50 UK cities and towns</p>
     </div>
 
-    <div class="cities-grid">
+    <div class="cities-grid" id="citiesGrid">
       <!-- England - Major -->
-      <div class="city-card" onclick="searchCity('London')"><div class="city-name">London</div><div class="city-count">142 properties</div></div>
-      <div class="city-card" onclick="searchCity('Manchester')"><div class="city-name">Manchester</div><div class="city-count">89 properties</div></div>
-      <div class="city-card" onclick="searchCity('Birmingham')"><div class="city-name">Birmingham</div><div class="city-count">76 properties</div></div>
-      <div class="city-card" onclick="searchCity('Leeds')"><div class="city-name">Leeds</div><div class="city-count">54 properties</div></div>
-      <div class="city-card" onclick="searchCity('Liverpool')"><div class="city-name">Liverpool</div><div class="city-count">42 properties</div></div>
-      <div class="city-card" onclick="searchCity('Bristol')"><div class="city-name">Bristol</div><div class="city-count">38 properties</div></div>
-      <div class="city-card" onclick="searchCity('Sheffield')"><div class="city-name">Sheffield</div><div class="city-count">32 properties</div></div>
-      <div class="city-card" onclick="searchCity('Newcastle')"><div class="city-name">Newcastle</div><div class="city-count">28 properties</div></div>
-      <div class="city-card" onclick="searchCity('Nottingham')"><div class="city-name">Nottingham</div><div class="city-count">26 properties</div></div>
-      <div class="city-card" onclick="searchCity('Leicester')"><div class="city-name">Leicester</div><div class="city-count">24 properties</div></div>
-      <div class="city-card" onclick="searchCity('Southampton')"><div class="city-name">Southampton</div><div class="city-count">22 properties</div></div>
-      <div class="city-card" onclick="searchCity('Portsmouth')"><div class="city-name">Portsmouth</div><div class="city-count">20 properties</div></div>
-      <div class="city-card" onclick="searchCity('Plymouth')"><div class="city-name">Plymouth</div><div class="city-count">18 properties</div></div>
-      <div class="city-card" onclick="searchCity('Brighton')"><div class="city-name">Brighton</div><div class="city-count">21 properties</div></div>
-      <div class="city-card" onclick="searchCity('Oxford')"><div class="city-name">Oxford</div><div class="city-count">17 properties</div></div>
-      <div class="city-card" onclick="searchCity('Cambridge')"><div class="city-name">Cambridge</div><div class="city-count">19 properties</div></div>
-      <div class="city-card" onclick="searchCity('York')"><div class="city-name">York</div><div class="city-count">15 properties</div></div>
-      <div class="city-card" onclick="searchCity('Bath')"><div class="city-name">Bath</div><div class="city-count">12 properties</div></div>
-      <div class="city-card" onclick="searchCity('Coventry')"><div class="city-name">Coventry</div><div class="city-count">20 properties</div></div>
-      <div class="city-card" onclick="searchCity('Stoke')"><div class="city-name">Stoke-on-Trent</div><div class="city-count">14 properties</div></div>
-      <div class="city-card" onclick="searchCity('Derby')"><div class="city-name">Derby</div><div class="city-count">16 properties</div></div>
-      <div class="city-card" onclick="searchCity('Wolverhampton')"><div class="city-name">Wolverhampton</div><div class="city-count">13 properties</div></div>
-      <div class="city-card" onclick="searchCity('Middlesbrough')"><div class="city-name">Middlesbrough</div><div class="city-count">10 properties</div></div>
-      <div class="city-card" onclick="searchCity('Sunderland')"><div class="city-name">Sunderland</div><div class="city-count">11 properties</div></div>
-      <div class="city-card" onclick="searchCity('Hull')"><div class="city-name">Hull</div><div class="city-count">12 properties</div></div>
-      <div class="city-card" onclick="searchCity('Bradford')"><div class="city-name">Bradford</div><div class="city-count">15 properties</div></div>
+      <div class="city-card" data-city="London"><div class="city-name">LONDON</div><div class="city-count">142 properties</div></div>
+      <div class="city-card" data-city="Manchester"><div class="city-name">MANCHESTER</div><div class="city-count">89 properties</div></div>
+      <div class="city-card" data-city="Birmingham"><div class="city-name">BIRMINGHAM</div><div class="city-count">76 properties</div></div>
+      <div class="city-card" data-city="Leeds"><div class="city-name">LEEDS</div><div class="city-count">54 properties</div></div>
+      <div class="city-card" data-city="Liverpool"><div class="city-name">LIVERPOOL</div><div class="city-count">42 properties</div></div>
+      <div class="city-card" data-city="Bristol"><div class="city-name">BRISTOL</div><div class="city-count">38 properties</div></div>
+      <div class="city-card" data-city="Sheffield"><div class="city-name">SHEFFIELD</div><div class="city-count">32 properties</div></div>
+      <div class="city-card" data-city="Newcastle"><div class="city-name">NEWCASTLE</div><div class="city-count">28 properties</div></div>
+      <div class="city-card" data-city="Nottingham"><div class="city-name">NOTTINGHAM</div><div class="city-count">26 properties</div></div>
+      <div class="city-card" data-city="Leicester"><div class="city-name">LEICESTER</div><div class="city-count">24 properties</div></div>
+      <div class="city-card" data-city="Southampton"><div class="city-name">SOUTHAMPTON</div><div class="city-count">22 properties</div></div>
+      <div class="city-card" data-city="Portsmouth"><div class="city-name">PORTSMOUTH</div><div class="city-count">20 properties</div></div>
+      <div class="city-card" data-city="Plymouth"><div class="city-name">PLYMOUTH</div><div class="city-count">18 properties</div></div>
+      <div class="city-card" data-city="Brighton"><div class="city-name">BRIGHTON</div><div class="city-count">21 properties</div></div>
+      <div class="city-card" data-city="Oxford"><div class="city-name">OXFORD</div><div class="city-count">17 properties</div></div>
+      <div class="city-card" data-city="Cambridge"><div class="city-name">CAMBRIDGE</div><div class="city-count">19 properties</div></div>
+      <div class="city-card" data-city="York"><div class="city-name">YORK</div><div class="city-count">15 properties</div></div>
+      <div class="city-card" data-city="Bath"><div class="city-name">BATH</div><div class="city-count">12 properties</div></div>
+      <div class="city-card" data-city="Coventry"><div class="city-name">COVENTRY</div><div class="city-count">20 properties</div></div>
+      <div class="city-card" data-city="Stoke"><div class="city-name">STOKE-ON-TRENT</div><div class="city-count">14 properties</div></div>
+      <div class="city-card" data-city="Derby"><div class="city-name">DERBY</div><div class="city-count">16 properties</div></div>
+      <div class="city-card" data-city="Wolverhampton"><div class="city-name">WOLVERHAMPTON</div><div class="city-count">13 properties</div></div>
       
       <!-- Scotland -->
-      <div class="city-card" onclick="searchCity('Glasgow')"><div class="city-name">Glasgow</div><div class="city-count">47 properties</div></div>
-      <div class="city-card" onclick="searchCity('Edinburgh')"><div class="city-name">Edinburgh</div><div class="city-count">41 properties</div></div>
-      <div class="city-card" onclick="searchCity('Aberdeen')"><div class="city-name">Aberdeen</div><div class="city-count">23 properties</div></div>
-      <div class="city-card" onclick="searchCity('Dundee')"><div class="city-name">Dundee</div><div class="city-count">16 properties</div></div>
-      <div class="city-card" onclick="searchCity('Perth')"><div class="city-name">Perth</div><div class="city-count">9 properties</div></div>
-      <div class="city-card" onclick="searchCity('Stirling')"><div class="city-name">Stirling</div><div class="city-count">8 properties</div></div>
+      <div class="city-card" data-city="Glasgow"><div class="city-name">GLASGOW</div><div class="city-count">47 properties</div></div>
+      <div class="city-card" data-city="Edinburgh"><div class="city-name">EDINBURGH</div><div class="city-count">41 properties</div></div>
+      <div class="city-card" data-city="Aberdeen"><div class="city-name">ABERDEEN</div><div class="city-count">23 properties</div></div>
+      <div class="city-card" data-city="Dundee"><div class="city-name">DUNDEE</div><div class="city-count">16 properties</div></div>
       
       <!-- Wales -->
-      <div class="city-card" onclick="searchCity('Cardiff')"><div class="city-name">Cardiff</div><div class="city-count">31 properties</div></div>
-      <div class="city-card" onclick="searchCity('Swansea')"><div class="city-name">Swansea</div><div class="city-count">19 properties</div></div>
-      <div class="city-card" onclick="searchCity('Newport')"><div class="city-name">Newport</div><div class="city-count">15 properties</div></div>
-      <div class="city-card" onclick="searchCity('Wrexham')"><div class="city-name">Wrexham</div><div class="city-count">11 properties</div></div>
+      <div class="city-card" data-city="Cardiff"><div class="city-name">CARDIFF</div><div class="city-count">31 properties</div></div>
+      <div class="city-card" data-city="Swansea"><div class="city-name">SWANSEA</div><div class="city-count">19 properties</div></div>
+      <div class="city-card" data-city="Newport"><div class="city-name">NEWPORT</div><div class="city-count">15 properties</div></div>
       
       <!-- Northern Ireland -->
-      <div class="city-card" onclick="searchCity('Belfast')"><div class="city-name">Belfast</div><div class="city-count">34 properties</div></div>
-      <div class="city-card" onclick="searchCity('Derry')"><div class="city-name">Derry</div><div class="city-count">13 properties</div></div>
-      <div class="city-card" onclick="searchCity('Lisburn')"><div class="city-name">Lisburn</div><div class="city-count">9 properties</div></div>
+      <div class="city-card" data-city="Belfast"><div class="city-name">BELFAST</div><div class="city-count">34 properties</div></div>
+      <div class="city-card" data-city="Derry"><div class="city-name">DERRY</div><div class="city-count">13 properties</div></div>
     </div>
   </div>
 </div>
@@ -729,17 +741,17 @@
   <div class="container">
     <div class="about-grid">
       <div class="about-text">
-        <h3>About Coast to Coast Commercial</h3>
-        <p>Coast to Coast Commercial is a premier UK commercial real estate advisory firm, established in 2025 to provide exceptional property solutions across every dimension of the commercial market. With a team of experienced surveyors, negotiators and property managers, we offer unrivalled local knowledge combined with national reach.</p>
+        <h3>ABOUT COAST TO COAST COMMERCIAL</h3>
+        <p>Coast to Coast Commercial is a premier UK commercial real estate advisory firm, providing exceptional property solutions across every dimension of the commercial market. With a team of experienced surveyors, negotiators and property managers, we offer unrivalled local knowledge combined with national reach.</p>
         <p>Our core business encompasses the sale and letting of offices, retail units, industrial spaces and development land across the United Kingdom. From prime London offices to regional industrial estates, we advise investors, landlords and occupiers with integrity, market insight and professionalism.</p>
         <p>We are proud to be an independent firm, putting client relationships at the heart of everything we do. Our approach combines traditional values of trust and transparency with modern technology and marketing to achieve outstanding results for our clients.</p>
         <p>All members of our team are RICS-regulated and bound by the highest professional standards. We are members of The Property Ombudsman scheme, ensuring complete peace of mind for every client.</p>
       </div>
       <div class="contact-info" id="contact">
-        <h4>Contact our team</h4>
+        <h4>CONTACT OUR TEAM</h4>
         <p>For enquiries, viewings or listing opportunities:</p>
-        <a href="mailto:info.coastocoastcommercial@gmail.com?subject=Commercial%20property%20enquiry%20via%20website&body=Please%20provide%20details%20of%20your%20requirements%20or%20property%20address">📧 info.coastocoastcommercial@gmail.com</a>
-        <p style="margin-top: 1rem; color: #ffdb9f;">📞 020 1234 5678</p>
+        <a href="mailto:info.coastocoastcommercial@gmail.com?subject=Commercial%20property%20enquiry%20via%20website&body=Please%20provide%20details%20of%20your%20requirements%20or%20property%20address">📧 INFO@COASTOCOASTCOMMERCIAL.COM</a>
+        <p style="margin-top: 1rem; color: #cccccc;">📞 020 1234 5678</p>
         <p style="margin-top: 1rem;">Response within 2 working hours</p>
         <p style="margin-top: 0.5rem; font-size: 0.9rem;">Click the email above to send a message directly</p>
       </div>
@@ -751,33 +763,33 @@
 <div id="legal" class="legal-section">
   <div class="container">
     <div class="section-header">
-      <h2>⚖️ Legal & regulatory information</h2>
+      <h2>⚖️ LEGAL & REGULATORY INFORMATION</h2>
       <p>Our commitment to compliance and professional standards</p>
     </div>
 
     <div class="legal-grid">
       <div class="legal-card">
-        <h4>Property Misdescriptions Act</h4>
+        <h4>PROPERTY MISDESCRIPTIONS ACT</h4>
         <p>We comply fully with the Property Misdescriptions Act 1991 and Consumer Protection Regulations. All property particulars are for guidance only and intended to give a fair description of the property. Prospective purchasers and tenants should verify all details independently.</p>
       </div>
       <div class="legal-card">
-        <h4>Commercial Leases</h4>
+        <h4>COMMERCIAL LEASES</h4>
         <p>All commercial leases are governed by the Landlord and Tenant Act 1954 (Part II) unless explicitly contracted out. We strongly recommend all parties seek independent legal advice before entering any commercial lease agreement.</p>
       </div>
       <div class="legal-card">
-        <h4>Data Protection (UK GDPR)</h4>
+        <h4>DATA PROTECTION (UK GDPR)</h4>
         <p>We process personal data in accordance with the UK General Data Protection Regulation and Data Protection Act 2018. Your information is used solely for property-related communications and never shared with third parties without explicit consent. Full privacy policy available on request.</p>
       </div>
       <div class="legal-card">
-        <h4>Money Laundering Regulations</h4>
+        <h4>MONEY LAUNDERING REGULATIONS</h4>
         <p>As a regulated property firm, we comply with the Money Laundering, Terrorist Financing and Transfer of Funds Regulations 2017. Proof of identity and address is required for all successful purchasers and tenants prior to transaction completion.</p>
       </div>
       <div class="legal-card">
-        <h4>Energy Performance Certificates</h4>
+        <h4>ENERGY PERFORMANCE CERTIFICATES</h4>
         <p>EPCs are provided for all commercial properties as required by the Energy Performance of Buildings (England and Wales) Regulations 2012. All EPC ratings displayed are current and valid. Full certificates available on request.</p>
       </div>
       <div class="legal-card">
-        <h4>Complaints Procedure</h4>
+        <h4>COMPLAINTS PROCEDURE</h4>
         <p>We are members of The Property Ombudsman scheme (membership no: TPO1234). Our full complaints procedure is available on request. In the event of a dispute, clients may contact The Property Ombudsman for independent resolution.</p>
       </div>
     </div>
@@ -789,41 +801,41 @@
   </div>
 </div>
 
-<!-- Footer -->
+<!-- Black and white footer with different font -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
-        <h4>Coast to Coast</h4>
-        <a onclick="scrollToSection('about')">About us</a>
-        <a onclick="scrollToSection('contact')">Contact</a>
-        <a onclick="scrollToSection('cities')">Locations</a>
-        <a onclick="scrollToSection('legal')">Legal</a>
+        <h4>COAST TO COAST</h4>
+        <a onclick="scrollToSection('about')">ABOUT US</a>
+        <a onclick="scrollToSection('contact')">CONTACT</a>
+        <a onclick="scrollToSection('cities')">LOCATIONS</a>
+        <a onclick="scrollToSection('legal')">LEGAL</a>
       </div>
       <div class="footer-col">
-        <h4>Property types</h4>
-        <a onclick="filterProperties('office')">Offices</a>
-        <a onclick="filterProperties('retail')">Retail units</a>
-        <a onclick="filterProperties('industrial')">Industrial</a>
-        <a onclick="filterProperties('land')">Development land</a>
+        <h4>PROPERTY TYPES</h4>
+        <a onclick="filterProperties('office')">OFFICES</a>
+        <a onclick="filterProperties('retail')">RETAIL UNITS</a>
+        <a onclick="filterProperties('industrial')">INDUSTRIAL</a>
+        <a onclick="filterProperties('land')">DEVELOPMENT LAND</a>
       </div>
       <div class="footer-col">
-        <h4>Services</h4>
-        <a onclick="scrollToSection('for-sale')">Commercial sales</a>
-        <a onclick="scrollToSection('to-rent')">Commercial lettings</a>
-        <a href="#">Property management</a>
-        <a href="#">Valuations</a>
+        <h4>SERVICES</h4>
+        <a onclick="scrollToSection('for-sale')">COMMERCIAL SALES</a>
+        <a onclick="scrollToSection('to-rent')">COMMERCIAL LETTINGS</a>
+        <a href="#">PROPERTY MANAGEMENT</a>
+        <a href="#">VALUATIONS</a>
       </div>
       <div class="footer-col">
-        <h4>Contact</h4>
-        <a href="mailto:info.coastocoastcommercial@gmail.com">Email us</a>
-        <a href="#">Office: 020 1234 5678</a>
-        <a onclick="scrollToSection('legal')">Privacy policy</a>
-        <a onclick="scrollToSection('legal')">Terms of use</a>
+        <h4>CONTACT</h4>
+        <a href="mailto:info.coastocoastcommercial@gmail.com">EMAIL US</a>
+        <a href="#">020 1234 5678</a>
+        <a onclick="scrollToSection('legal')">PRIVACY POLICY</a>
+        <a onclick="scrollToSection('legal')">TERMS OF USE</a>
       </div>
     </div>
     <div class="copyright">
-      © Coast to Coast Commercial 2026 · All rights reserved · Part of the UK Commercial Property Network
+      © COAST TO COAST COMMERCIAL 2026 · ALL RIGHTS RESERVED · PART OF THE UK COMMERCIAL PROPERTY NETWORK
     </div>
   </div>
 </footer>
@@ -837,53 +849,94 @@ function scrollToSection(sectionId) {
   }
 }
 
-// Search function
+// FIXED SEARCH FUNCTION - Now works with cities and postcodes
 function searchProperties() {
-  const searchTerm = document.getElementById('searchInput').value.trim();
+  const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
+  
   if (searchTerm === '') {
     alert('Please enter a city or postcode');
     return;
   }
   
-  const ukPostcodes = ['M1', 'M2', 'M3', 'M4', 'B1', 'B2', 'LS1', 'LS2', 'G1', 'G2', 'EH1', 'EH2', 'CF10', 'BT1', 'L1', 'L2', 'S1', 'NE1', 'NG1', 'LE1', 'SO14', 'PO1', 'PL1', 'BN1', 'OX1', 'CB1', 'YO1', 'BA1', 'CV1', 'ST1', 'DE1', 'WV1', 'TS1', 'SR1', 'HU1', 'BD1', 'AB10', 'DD1', 'PH1', 'FK8', 'SA1', 'NP20', 'LL11', 'BT48', 'BT27'];
+  // Get all property cards
+  const saleCards = document.querySelectorAll('#saleProperties .property-card');
+  const rentCards = document.querySelectorAll('#rentProperties .property-card');
+  const allCards = [...saleCards, ...rentCards];
   
-  const ukCities = ['London', 'Manchester', 'Birmingham', 'Leeds', 'Liverpool', 'Bristol', 'Sheffield', 'Newcastle', 'Nottingham', 'Leicester', 'Southampton', 'Portsmouth', 'Plymouth', 'Brighton', 'Oxford', 'Cambridge', 'York', 'Bath', 'Coventry', 'Stoke', 'Derby', 'Wolverhampton', 'Middlesbrough', 'Sunderland', 'Hull', 'Bradford', 'Glasgow', 'Edinburgh', 'Aberdeen', 'Dundee', 'Perth', 'Stirling', 'Cardiff', 'Swansea', 'Newport', 'Wrexham', 'Belfast', 'Derry', 'Lisburn'];
+  let matchFound = false;
+  let matchedCity = '';
   
-  const match = [...ukCities, ...ukPostcodes].find(item => 
-    item.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  // First, check if it's a postcode (starts with letter followed by number)
+  const isPostcode = /^[a-z]{1,2}[0-9]/.test(searchTerm);
   
-  if (match) {
-    alert(`Showing commercial properties in ${match} area. Click OK to view all UK properties.`);
-    scrollToSection('for-sale');
+  // Search through all cards
+  allCards.forEach(card => {
+    const cardCity = card.dataset.city.toLowerCase();
+    const cardPostcode = card.dataset.postcode.toLowerCase();
+    const cardAddress = card.querySelector('.address').textContent.toLowerCase();
+    
+    // Check if search term matches city, postcode, or address
+    const matches = cardCity.includes(searchTerm) || 
+                    cardPostcode.includes(searchTerm) || 
+                    cardAddress.includes(searchTerm);
+    
+    if (matches) {
+      matchFound = true;
+      matchedCity = card.dataset.city;
+      // Highlight the card temporarily
+      card.classList.add('highlight');
+      setTimeout(() => {
+        card.classList.remove('highlight');
+      }, 2000);
+    }
+  });
+  
+  if (matchFound) {
+    alert(`✓ Found properties matching "${searchTerm}" in ${matchedCity || 'your search'}. Properties highlighted.`);
+    // Scroll to first matching property
+    const firstMatch = document.querySelector('.property-card.highlight');
+    if (firstMatch) {
+      firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
   } else {
-    alert(`Showing all UK commercial properties. For exact matches, try: Manchester, London, M1, B1, etc.`);
+    alert(`No exact matches found for "${searchTerm}". Try:\n` +
+          `• Cities: London, Manchester, Birmingham, Leeds, Glasgow, Cardiff, Belfast\n` +
+          `• Postcodes: M1, B1, LS1, G1, EH1, CF10, BT1\n` +
+          `Showing all UK properties.`);
   }
 }
 
-// Search by city from grid
-function searchCity(city) {
-  document.getElementById('searchInput').value = city;
-  alert(`Showing commercial properties in ${city} area`);
-  scrollToSection('for-sale');
-}
+// Search by city from grid - FIXED
+document.querySelectorAll('.city-card').forEach(card => {
+  card.addEventListener('click', function() {
+    const city = this.dataset.city;
+    document.getElementById('searchInput').value = city;
+    searchProperties();
+  });
+});
 
 // Filter properties by type
 function filterProperties(type) {
+  const saleCards = document.querySelectorAll('#saleProperties .property-card');
+  const rentCards = document.querySelectorAll('#rentProperties .property-card');
+  const allCards = [...saleCards, ...rentCards];
+  
   if (type === 'all') {
-    document.querySelectorAll('.property-card').forEach(card => {
+    allCards.forEach(card => {
       card.style.display = 'block';
     });
     alert('Showing all property types');
   } else {
-    document.querySelectorAll('.property-card').forEach(card => {
+    let visibleCount = 0;
+    allCards.forEach(card => {
       if (card.dataset.type === type) {
         card.style.display = 'block';
+        visibleCount++;
       } else {
         card.style.display = 'none';
       }
     });
-    alert(`Showing ${type} properties only`);
+    alert(`Showing ${visibleCount} ${type.toUpperCase()} properties`);
   }
   scrollToSection('for-sale');
 }
