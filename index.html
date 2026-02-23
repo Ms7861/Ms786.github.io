@@ -4,20 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   
-  <!-- SEO Meta Tags for Search Engines -->
+  <!-- SEO Meta Tags -->
   <title>Coast to Coast Commercial - UK Commercial Property Specialists</title>
-  <meta name="description" content="Coast to Coast Commercial: UK commercial property experts. Offices, retail units, industrial space for sale and to rent across all UK regions. Contact our team.">
-  <meta name="keywords" content="commercial property UK, offices for sale, retail units to rent, industrial space, commercial real estate, property investment">
+  <meta name="description" content="Coast to Coast Commercial: UK commercial property experts. Offices, retail units, industrial space for sale and to rent across all UK locations. View properties with floor plans and particulars.">
+  <meta name="keywords" content="commercial property UK, offices for sale, retail units to rent, industrial space, commercial real estate, property investment, floor plans">
   <meta name="author" content="Coast to Coast Commercial">
   <meta name="robots" content="index, follow">
   
-  <!-- Open Graph for social media -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Coast to Coast Commercial - UK Commercial Property">
   <meta property="og:description" content="Commercial properties for sale and to rent across the United Kingdom">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://coasttocoastcommercial.co.uk">
   
-  <!-- Favicon (browser tab icon) -->
+  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏢</text></svg>">
   
   <style>
@@ -36,7 +36,7 @@
       overflow-x: hidden;
     }
 
-    /* Container with better mobile padding */
+    /* Container */
     .container {
       width: 100%;
       max-width: 1280px;
@@ -50,7 +50,7 @@
       }
     }
 
-    /* Black header - mobile first */
+    /* Black header */
     .top-header {
       background: #000000;
       border-bottom: 2px solid #ffffff;
@@ -90,13 +90,6 @@
       }
     }
 
-    .logo span {
-      font-size: 0.8rem;
-      color: #cccccc;
-      display: block;
-      text-align: center;
-    }
-
     .nav {
       display: flex;
       gap: 1rem;
@@ -119,17 +112,11 @@
       white-space: nowrap;
     }
 
-    @media (min-width: 768px) {
-      .nav a {
-        font-size: 1rem;
-      }
-    }
-
     .nav a:hover {
       color: #cccccc;
     }
 
-    /* Hero search - mobile optimized */
+    /* Hero Search */
     .hero {
       background: linear-gradient(to right, #f8faff, #ffffff);
       padding: 2rem 0;
@@ -147,7 +134,6 @@
       font-weight: 600;
       margin-bottom: 1.5rem;
       color: #000000;
-      line-height: 1.3;
     }
 
     @media (min-width: 768px) {
@@ -184,12 +170,6 @@
       width: 100%;
     }
 
-    @media (min-width: 600px) {
-      .search-input {
-        padding: 1.2rem 1.8rem;
-      }
-    }
-
     .search-btn {
       background: #000000;
       color: white;
@@ -208,83 +188,126 @@
       }
     }
 
-    .search-btn:hover {
-      background: #333333;
+    /* Slideshow Section */
+    .slideshow-section {
+      padding: 2rem 0;
+      background: #f8faff;
     }
 
-    .search-hint {
-      color: #6f7d8c;
-      font-size: 0.85rem;
-      margin-top: 0.5rem;
+    .slideshow-container {
+      position: relative;
+      max-width: 1200px;
+      margin: 2rem auto;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     }
 
-    /* Property type links - mobile scrollable */
-    .property-type-links {
+    .slideshow {
       display: flex;
-      gap: 1rem;
-      margin: 1.5rem 0;
-      flex-wrap: wrap;
-      border-bottom: 1px solid #e6e9ed;
-      padding-bottom: 1rem;
+      transition: transform 0.5s ease;
+    }
+
+    .slide {
+      min-width: 100%;
+      position: relative;
+    }
+
+    .slide-image {
+      width: 100%;
+      height: 300px;
+      background-size: cover;
+      background-position: center;
     }
 
     @media (min-width: 768px) {
-      .property-type-links {
-        gap: 2rem;
+      .slide-image {
+        height: 400px;
       }
     }
 
-    .property-type-link {
-      color: #000000;
-      text-decoration: none;
-      font-weight: 600;
-      padding: 0.5rem 0;
-      border-bottom: 3px solid transparent;
-      cursor: pointer;
-      font-size: 0.9rem;
-      white-space: nowrap;
+    .slide-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.8));
+      color: white;
+      padding: 2rem 1.5rem 1.5rem;
     }
 
-    @media (min-width: 768px) {
-      .property-type-link {
-        font-size: 1rem;
-      }
+    .slide-caption h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
     }
 
-    .property-type-link:hover {
-      border-bottom-color: #000000;
+    .slide-caption p {
+      font-size: 1.1rem;
+      opacity: 0.9;
     }
 
-    /* Section headers */
-    .section-header {
-      margin: 2rem 0 1rem;
-    }
-
-    @media (min-width: 768px) {
-      .section-header {
-        margin: 3rem 0 1.5rem;
-      }
-    }
-
-    .section-header h2 {
-      font-size: 1.6rem;
-      color: #000000;
+    .slide-price {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: #000000;
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 30px;
       font-weight: 700;
+      font-size: 1.2rem;
     }
 
-    @media (min-width: 768px) {
-      .section-header h2 {
-        font-size: 2rem;
-      }
+    .slideshow-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
     }
 
-    .section-header p {
-      color: #6f7d8c;
-      margin-top: 0.5rem;
-      font-size: 0.95rem;
+    .slideshow-btn:hover {
+      background: rgba(0,0,0,0.8);
     }
 
-    /* Property grid - fully responsive */
+    .prev {
+      left: 1rem;
+    }
+
+    .next {
+      right: 1rem;
+    }
+
+    .slide-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #cccccc;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background: #000000;
+    }
+
+    /* Property Grid */
     .property-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -312,7 +335,13 @@
       border-radius: 12px;
       overflow: hidden;
       transition: 0.2s;
-      width: 100%;
+      cursor: pointer;
+    }
+
+    .property-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      border-color: #000000;
     }
 
     .card-image {
@@ -320,12 +349,6 @@
       background-size: cover;
       background-position: center;
       position: relative;
-    }
-
-    @media (min-width: 768px) {
-      .card-image {
-        height: 200px;
-      }
     }
 
     .card-badge {
@@ -344,12 +367,6 @@
       padding: 1.2rem;
     }
 
-    @media (min-width: 768px) {
-      .card-content {
-        padding: 1.5rem;
-      }
-    }
-
     .price {
       font-size: 1.5rem;
       font-weight: 700;
@@ -357,17 +374,10 @@
       margin-bottom: 0.3rem;
     }
 
-    @media (min-width: 768px) {
-      .price {
-        font-size: 1.8rem;
-      }
-    }
-
     .address {
       font-size: 1.1rem;
       font-weight: 600;
       margin-bottom: 0.5rem;
-      color: #000000;
     }
 
     .details {
@@ -376,56 +386,188 @@
       font-size: 0.9rem;
     }
 
-    .features {
-      display: flex;
-      gap: 1rem;
-      color: #6f7d8c;
-      font-size: 0.85rem;
-      border-top: 1px solid #e6e9ed;
-      padding-top: 0.8rem;
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      z-index: 1000;
+      overflow-y: auto;
     }
 
-    /* UK Regions Grid - mobile optimized */
-    .regions-section {
+    .modal-content {
+      background: white;
+      max-width: 1000px;
+      margin: 2rem auto;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      .modal-content {
+        margin: 1rem;
+        width: calc(100% - 2rem);
+      }
+    }
+
+    .modal-header {
+      padding: 1.5rem;
+      border-bottom: 1px solid #e6e9ed;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-header h2 {
+      font-size: 1.8rem;
+      color: #000000;
+    }
+
+    .close-modal {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: #666;
+    }
+
+    .modal-body {
+      padding: 2rem;
+    }
+
+    /* Property Gallery in Modal */
+    .property-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .property-gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .gallery-image {
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+    }
+
+    /* Property Details Grid */
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    @media (max-width: 600px) {
+      .details-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .detail-item {
+      margin-bottom: 1rem;
+    }
+
+    .detail-label {
+      font-weight: 600;
+      color: #000000;
+      margin-bottom: 0.3rem;
+    }
+
+    .detail-value {
+      color: #4a5b6b;
+    }
+
+    /* Floor Plan */
+    .floor-plan {
+      margin: 2rem 0;
+      padding: 2rem;
+      background: #f8faff;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .floor-plan img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    /* Features List */
+    .features-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .feature-tag {
+      background: #f0f0f0;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      font-size: 0.9rem;
+    }
+
+    /* Contact Bar */
+    .contact-bar {
+      background: #000000;
+      color: white;
+      padding: 1rem 0;
+      margin: 2rem 0;
+    }
+
+    .contact-bar-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .contact-email {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    /* Locations Grid */
+    .locations-section {
       background: #f8faff;
       padding: 2rem 0;
       margin: 2rem 0;
     }
 
-    @media (min-width: 768px) {
-      .regions-section {
-        padding: 3rem 0;
-        margin: 3rem 0;
-      }
-    }
-
-    .regions-grid {
+    .locations-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 0.8rem;
       margin-top: 1.5rem;
     }
 
-    @media (min-width: 500px) {
-      .regions-grid {
+    @media (min-width: 600px) {
+      .locations-grid {
         grid-template-columns: repeat(3, 1fr);
       }
     }
 
-    @media (min-width: 768px) {
-      .regions-grid {
+    @media (min-width: 900px) {
+      .locations-grid {
         grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
       }
     }
 
-    @media (min-width: 1000px) {
-      .regions-grid {
-        grid-template-columns: repeat(5, 1fr);
-      }
-    }
-
-    .region-card {
+    .location-card {
       background: white;
       padding: 1rem;
       border-radius: 8px;
@@ -434,178 +576,27 @@
       cursor: pointer;
     }
 
-    @media (min-width: 768px) {
-      .region-card {
-        padding: 1.2rem;
-      }
-    }
-
-    .region-card:hover {
+    .location-card:hover {
       border-color: #000000;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    .region-name {
+    .location-name {
       font-weight: 600;
       color: #000000;
-      font-size: 0.9rem;
     }
 
-    @media (min-width: 768px) {
-      .region-name {
-        font-size: 1rem;
-      }
-    }
-
-    .region-count {
+    .location-count {
       color: #6f7d8c;
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       margin-top: 0.3rem;
     }
 
-    /* About Section - mobile optimized */
-    .about-section {
-      padding: 2rem 0;
-      background: white;
-    }
-
-    @media (min-width: 768px) {
-      .about-section {
-        padding: 3rem 0;
-      }
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      margin-top: 1.5rem;
-    }
-
-    @media (min-width: 800px) {
-      .about-grid {
-        grid-template-columns: 2fr 1fr;
-        gap: 3rem;
-      }
-    }
-
-    .about-text h3 {
-      color: #000000;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      font-weight: 700;
-    }
-
-    @media (min-width: 768px) {
-      .about-text h3 {
-        font-size: 1.8rem;
-      }
-    }
-
-    .about-text p {
-      color: #2b4b62;
-      margin-bottom: 1rem;
-      font-size: 1rem;
-    }
-
-    .contact-info {
-      background: #000000;
-      color: white;
-      padding: 1.5rem;
-      border-radius: 12px;
-    }
-
-    @media (min-width: 768px) {
-      .contact-info {
-        padding: 2rem;
-      }
-    }
-
-    .contact-info h4 {
-      font-size: 1.3rem;
-      margin-bottom: 1rem;
-      color: #ffffff;
-    }
-
-    .contact-info a {
-      color: #ffffff;
-      text-decoration: none;
-      display: block;
-      margin: 1rem 0;
-      font-size: 1rem;
-      word-break: break-all;
-    }
-
-    /* Legal Section - mobile optimized */
-    .legal-section {
-      background: #f8faff;
-      padding: 2rem 0;
-    }
-
-    @media (min-width: 768px) {
-      .legal-section {
-        padding: 3rem 0;
-      }
-    }
-
-    .legal-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-
-    @media (min-width: 600px) {
-      .legal-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (min-width: 1000px) {
-      .legal-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-      }
-    }
-
-    .legal-card {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 12px;
-      border: 1px solid #e6e9ed;
-    }
-
-    .legal-card h4 {
-      color: #000000;
-      margin-bottom: 0.8rem;
-      font-size: 1.2rem;
-      font-weight: 700;
-    }
-
-    .legal-card p {
-      color: #4a5b6b;
-      font-size: 0.9rem;
-    }
-
-    .legal-footer {
-      margin-top: 1.5rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid #e6e9ed;
-      color: #6f7d8c;
-      font-size: 0.85rem;
-    }
-
-    /* Black footer - mobile optimized */
+    /* Footer */
     .footer {
       background: #000000;
       color: #ffffff;
       padding: 2rem 0 1.5rem;
-    }
-
-    @media (min-width: 768px) {
-      .footer {
-        padding: 3rem 0 2rem;
-      }
+      margin-top: 3rem;
     }
 
     .footer-grid {
@@ -626,7 +617,6 @@
       color: #ffffff;
       font-size: 1.1rem;
       font-weight: 700;
-      font-family: 'Impact', 'Arial Black', sans-serif;
     }
 
     .footer-col a {
@@ -651,14 +641,7 @@
       font-size: 0.8rem;
     }
 
-    /* Highlight for search results */
-    .highlight {
-      background-color: #ffffcc;
-      transition: background-color 0.5s;
-      border: 2px solid #000000;
-    }
-
-    /* Back to top button - mobile friendly */
+    /* Back to top */
     .back-to-top {
       position: fixed;
       bottom: 1rem;
@@ -672,24 +655,15 @@
       align-items: center;
       justify-content: center;
       text-decoration: none;
-      font-weight: bold;
       font-size: 1.5rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       cursor: pointer;
       z-index: 99;
-    }
-
-    @media (min-width: 768px) {
-      .back-to-top {
-        bottom: 2rem;
-        right: 2rem;
-      }
     }
   </style>
 </head>
 <body>
 
-<!-- Black header -->
+<!-- Header -->
 <div class="top-header">
   <div class="container header-flex">
     <div class="logo">
@@ -697,11 +671,11 @@
       <span>COMMERCIAL</span>
     </div>
     <div class="nav">
+      <a onclick="scrollToSection('slideshow')">LATEST</a>
       <a onclick="scrollToSection('for-sale')">FOR SALE</a>
       <a onclick="scrollToSection('to-rent')">TO RENT</a>
-      <a onclick="scrollToSection('regions')">REGIONS</a>
+      <a onclick="scrollToSection('locations')">LOCATIONS</a>
       <a onclick="scrollToSection('about')">ABOUT</a>
-      <a onclick="scrollToSection('legal')">LEGAL</a>
       <a onclick="scrollToSection('contact')">CONTACT</a>
     </div>
   </div>
@@ -713,282 +687,80 @@
     <h2>Search commercial property<br>for sale and to rent across the UK</h2>
     
     <div class="search-wrapper">
-      <input class="search-input" id="searchInput" type="text" placeholder="Enter region, city or postcode...">
+      <input class="search-input" id="searchInput" type="text" placeholder="Enter location, city or postcode...">
       <button class="search-btn" onclick="searchProperties()">SEARCH</button>
-    </div>
-    <div class="search-hint">
-      🔍 Try: North West, London, Midlands, M1, B1, Scotland, Wales
-    </div>
-
-    <div class="property-type-links">
-      <a class="property-type-link" onclick="filterProperties('office')">OFFICES</a>
-      <a class="property-type-link" onclick="filterProperties('retail')">RETAIL</a>
-      <a class="property-type-link" onclick="filterProperties('industrial')">INDUSTRIAL</a>
-      <a class="property-type-link" onclick="filterProperties('land')">DEVELOPMENT LAND</a>
     </div>
   </div>
 </div>
 
-<main class="container">
-
-  <!-- For Sale Section -->
-  <div id="for-sale" class="section-header">
-    <h2>🏢 COMMERCIAL PROPERTIES FOR SALE</h2>
-    <p>Freehold and leasehold opportunities across UK regions</p>
-  </div>
-
-  <div class="property-grid" id="saleProperties">
-    <!-- North West -->
-    <div class="property-card" data-type="office" data-region="North West" data-city="Manchester" data-postcode="M3">
-      <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&auto=format&fit=crop')">
-        <span class="card-badge">FOR SALE</span>
-      </div>
-      <div class="card-content">
-        <div class="price">£975,000</div>
-        <div class="address">42 Deansgate, Manchester M3</div>
-        <div class="details">City centre office · 3,200 sq ft · 12 offices · EPC B</div>
-        <div class="features">📍 North West · 🚗 4 spaces</div>
-      </div>
-    </div>
-
-    <!-- Midlands -->
-    <div class="property-card" data-type="retail" data-region="Midlands" data-city="Birmingham" data-postcode="B5">
-      <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?w=600&auto=format&fit=crop')">
-        <span class="card-badge">FOR SALE</span>
-      </div>
-      <div class="card-content">
-        <div class="price">£1,425,000</div>
-        <div class="address">88 Bull Ring, Birmingham B5</div>
-        <div class="details">Retail parade · 5,500 sq ft · 3 units · EPC C</div>
-        <div class="features">📍 Midlands · 🚗 10 spaces</div>
-      </div>
-    </div>
-
-    <!-- Yorkshire -->
-    <div class="property-card" data-type="industrial" data-region="Yorkshire" data-city="Leeds" data-postcode="LS10">
-      <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&auto=format&fit=crop')">
-        <span class="card-badge">FOR SALE</span>
-      </div>
-      <div class="card-content">
-        <div class="price">£689,000</div>
-        <div class="address">15 Industrial Estate, Leeds LS10</div>
-        <div class="details">Industrial warehouse · 8,700 sq ft · 2 docks · EPC B</div>
-        <div class="features">📍 Yorkshire · 🚛 Drive-in</div>
-      </div>
-    </div>
-
-    <!-- Scotland -->
-    <div class="property-card" data-type="office" data-region="Scotland" data-city="Glasgow" data-postcode="G2">
-      <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1572021333549-63a8bdc8c7d7?w=600&auto=format&fit=crop')">
-        <span class="card-badge">FOR SALE</span>
-      </div>
-      <div class="card-content">
-        <div class="price">£895,000</div>
-        <div class="address">50 St Vincent Street, Glasgow G2</div>
-        <div class="details">City centre office · 4,100 sq ft · 15 offices · EPC B</div>
-        <div class="features">📍 Scotland · 🚗 3 spaces</div>
-      </div>
-    </div>
-
-    <!-- Wales -->
-    <div class="property-card" data-type="retail" data-region="Wales" data-city="Cardiff" data-postcode="CF10">
-      <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&auto=format&fit=crop')">
-        <span class="card-badge">FOR SALE</span>
-      </div>
-      <div class="card-content">
-        <div class="price">£795,000</div>
-        <div class="address">12 Queen Street, Cardiff CF10</div>
-        <div class="details">Retail unit · 2,800 sq ft · prime high street · EPC B</div>
-        <div class="features">📍 Wales · 🚗 City centre</div>
-      </div>
-    </div>
-
-    <!-- South East -->
-    <div class="property-card" data-type="office" data-region="South East" data-city="London" data-postcode="E14">
-      <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600&auto=format&fit=crop')">
-        <span class="card-badge">FOR SALE</span>
-      </div>
-      <div class="card-content">
-        <div class="price">£2,450,000</div>
-        <div class="address">1 Bank Street, Canary Wharf, London E14</div>
-        <div class="details">Premium office · 5,200 sq ft · 20 offices · EPC B</div>
-        <div class="features">📍 South East · 🚗 8 spaces</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- To Rent Section -->
-  <div id="to-rent" class="section-header">
-    <h2>🔑 COMMERCIAL PROPERTIES TO RENT</h2>
-    <p>Flexible lease terms available across all UK regions</p>
-  </div>
-
-  <div class="property-grid" id="rentProperties">
-    <!-- London -->
-    <div class="property-card" data-type="office" data-region="London" data-city="London" data-postcode="W1">
-      <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1584132915807-fd1f5fbc078f?w=600&auto=format&fit=crop')">
-        <span class="card-badge">TO RENT</span>
-      </div>
-      <div class="card-content">
-        <div class="price">£4,200 <span style="font-size: 1rem;">pcm</span></div>
-        <div class="address">220 Harley Street, London W1</div>
-        <div class="details">Medical suite · 1,800 sq ft · 5 rooms · EPC B</div>
-        <div class="features">📍 London · ⚕️ Medical</div>
-      </div>
-    </div>
-
-    <!-- South East -->
-    <div class="property-card" data-type="retail" data-region="South East" data-city="Brighton" data-postcode="BN1">
-      <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1555992336-fb0d29498b7f?w=600&auto=format&fit=crop')">
-        <span class="card-badge">TO RENT</span>
-      </div>
-      <div class="card-content">
-        <div class="price">£5,950 <span style="font-size: 1rem;">pcm</span></div>
-        <div class="address">12 The Lanes, Brighton BN1</div>
-        <div class="details">Restaurant space · 2,200 sq ft · full kitchen · EPC C</div>
-        <div class="features">📍 South East · 🍽️ Restaurant</div>
-      </div>
-    </div>
-
-    <!-- South West -->
-    <div class="property-card" data-type="industrial" data-region="South West" data-city="Bristol" data-postcode="BS2">
-      <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1565514158740-064f34bd6cf0?w=600&auto=format&fit=crop')">
-        <span class="card-badge">TO RENT</span>
-      </div>
-      <div class="card-content">
-        <div class="price">£3,900 <span style="font-size: 1rem;">pcm</span></div>
-        <div class="address">99 Commerce Park, Bristol BS2</div>
-        <div class="details">Industrial unit · 6,000 sq ft · drive-in · EPC B</div>
-        <div class="features">📍 South West · 🚛 Loading bay</div>
-      </div>
-    </div>
-
-    <!-- Scotland -->
-    <div class="property-card" data-type="office" data-region="Scotland" data-city="Edinburgh" data-postcode="EH2">
-      <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&auto=format&fit=crop')">
-        <span class="card-badge">TO RENT</span>
-      </div>
-      <div class="card-content">
-        <div class="price">£3,500 <span style="font-size: 1rem;">pcm</span></div>
-        <div class="address">45 George Street, Edinburgh EH2</div>
-        <div class="details">City office · 1,500 sq ft · 6 offices · EPC B</div>
-        <div class="features">📍 Scotland · ⭐ Prime location</div>
-      </div>
-    </div>
-
-    <!-- Northern Ireland -->
-    <div class="property-card" data-type="retail" data-region="Northern Ireland" data-city="Belfast" data-postcode="BT1">
-      <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1519567241046-7f570eee3ce6?w=600&auto=format&fit=crop')">
-        <span class="card-badge">TO RENT</span>
-      </div>
-      <div class="card-content">
-        <div class="price">£2,800 <span style="font-size: 1rem;">pcm</span></div>
-        <div class="address">28 Donegall Place, Belfast BT1</div>
-        <div class="details">Retail unit · 1,200 sq ft · city centre · EPC C</div>
-        <div class="features">📍 Northern Ireland · 📍 High footfall</div>
-      </div>
-    </div>
-
-    <!-- North East -->
-    <div class="property-card" data-type="office" data-region="North East" data-city="Newcastle" data-postcode="NE1">
-      <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1497366858526-0766cadbe8fa?w=600&auto=format&fit=crop')">
-        <span class="card-badge">TO RENT</span>
-      </div>
-      <div class="card-content">
-        <div class="price">£2,200 <span style="font-size: 1rem;">pcm</span></div>
-        <div class="address">10 Pilgrim Street, Newcastle NE1</div>
-        <div class="details">City office · 1,100 sq ft · 4 offices · EPC B</div>
-        <div class="features">📍 North East · 📏 Flexible terms</div>
-      </div>
-    </div>
-  </div>
-</main>
-
-<!-- UK Regions Section -->
-<div id="regions" class="regions-section">
+<!-- Slideshow Section -->
+<div id="slideshow" class="slideshow-section">
   <div class="container">
     <div class="section-header">
-      <h2>📍 UK COMMERCIAL PROPERTY REGIONS</h2>
-      <p>Search commercial properties across all UK regions</p>
+      <h2>📸 LATEST COMMERCIAL PROPERTIES</h2>
+      <p>Recently added properties across the UK</p>
     </div>
 
-    <div class="regions-grid" id="regionsGrid">
-      <!-- England Regions -->
-      <div class="region-card" data-region="London"><div class="region-name">LONDON</div><div class="region-count">142 properties</div></div>
-      <div class="region-card" data-region="South East"><div class="region-name">SOUTH EAST</div><div class="region-count">98 properties</div></div>
-      <div class="region-card" data-region="South West"><div class="region-name">SOUTH WEST</div><div class="region-count">76 properties</div></div>
-      <div class="region-card" data-region="East Anglia"><div class="region-name">EAST ANGLIA</div><div class="region-count">54 properties</div></div>
-      <div class="region-card" data-region="East Midlands"><div class="region-name">EAST MIDLANDS</div><div class="region-count">62 properties</div></div>
-      <div class="region-card" data-region="West Midlands"><div class="region-name">WEST MIDLANDS</div><div class="region-count">58 properties</div></div>
-      <div class="region-card" data-region="Yorkshire"><div class="region-name">YORKSHIRE</div><div class="region-count">47 properties</div></div>
-      <div class="region-card" data-region="North West"><div class="region-name">NORTH WEST</div><div class="region-count">89 properties</div></div>
-      <div class="region-card" data-region="North East"><div class="region-name">NORTH EAST</div><div class="region-count">38 properties</div></div>
+    <div class="slideshow-container">
+      <div class="slideshow" id="slideshow">
+        <!-- Slides will be populated by JavaScript -->
+      </div>
       
-      <!-- Scotland -->
-      <div class="region-card" data-region="Scotland"><div class="region-name">SCOTLAND</div><div class="region-count">67 properties</div></div>
-      <div class="region-card" data-region="Glasgow"><div class="region-name">GLASGOW & WEST</div><div class="region-count">41 properties</div></div>
-      <div class="region-card" data-region="Edinburgh"><div class="region-name">EDINBURGH & EAST</div><div class="region-count">35 properties</div></div>
+      <button class="slideshow-btn prev" onclick="changeSlide(-1)">❮</button>
+      <button class="slideshow-btn next" onclick="changeSlide(1)">❯</button>
       
-      <!-- Wales -->
-      <div class="region-card" data-region="Wales"><div class="region-name">WALES</div><div class="region-count">43 properties</div></div>
-      <div class="region-card" data-region="South Wales"><div class="region-name">SOUTH WALES</div><div class="region-count">28 properties</div></div>
-      <div class="region-card" data-region="North Wales"><div class="region-name">NORTH WALES</div><div class="region-count">19 properties</div></div>
-      
-      <!-- Northern Ireland -->
-      <div class="region-card" data-region="Northern Ireland"><div class="region-name">NORTHERN IRELAND</div><div class="region-count">34 properties</div></div>
-      <div class="region-card" data-region="Belfast"><div class="region-name">BELFAST AREA</div><div class="region-count">22 properties</div></div>
+      <div class="slide-dots" id="slideDots"></div>
     </div>
+  </div>
+</div>
+
+<!-- For Sale Section -->
+<div id="for-sale" class="container">
+  <div class="section-header">
+    <h2>🏢 COMMERCIAL PROPERTIES FOR SALE</h2>
+    <p>Freehold and leasehold opportunities across UK locations</p>
+  </div>
+
+  <div class="property-grid" id="saleProperties"></div>
+</div>
+
+<!-- To Rent Section -->
+<div id="to-rent" class="container">
+  <div class="section-header">
+    <h2>🔑 COMMERCIAL PROPERTIES TO RENT</h2>
+    <p>Flexible lease terms available across all UK locations</p>
+  </div>
+
+  <div class="property-grid" id="rentProperties"></div>
+</div>
+
+<!-- Locations Section -->
+<div id="locations" class="locations-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>📍 UK COMMERCIAL PROPERTY LOCATIONS</h2>
+      <p>Search commercial properties across the United Kingdom</p>
+    </div>
+
+    <div class="locations-grid" id="locationsGrid"></div>
   </div>
 </div>
 
 <!-- About Section -->
-<div id="about" class="about-section">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-text">
-        <h3>ABOUT COAST TO COAST COMMERCIAL</h3>
-        <p>Coast to Coast Commercial is a premier UK commercial real estate advisory firm, providing exceptional property solutions across every region of the United Kingdom. With a team of experienced surveyors, negotiators and property managers, we offer unrivalled local knowledge combined with national reach.</p>
-        <p>Our core business encompasses the sale and letting of offices, retail units, industrial spaces and development land across all UK regions. From prime London offices to regional industrial estates, we advise investors, landlords and occupiers with integrity, market insight and professionalism.</p>
-        <p>We are proud to be an independent firm, putting client relationships at the heart of everything we do. All members of our team are RICS-regulated and bound by the highest professional standards.</p>
-      </div>
-      <div class="contact-info" id="contact">
-        <h4>CONTACT OUR TEAM</h4>
-        <p>For enquiries, viewings or listing opportunities:</p>
-        <a href="mailto:info@coasttocoastcommercial.co.uk">📧 INFO@COASTTOCOASTCOMMERCIAL.CO.UK</a>
-        <p style="margin-top: 1rem; color: #cccccc;">📞 020 1234 5678</p>
-        <p style="margin-top: 1rem;">Response within 2 working hours</p>
-      </div>
-    </div>
+<div id="about" class="container">
+  <div class="about-section" style="padding: 2rem 0;">
+    <h2>ABOUT COAST TO COAST COMMERCIAL</h2>
+    <p style="margin-top: 1rem;">Coast to Coast Commercial is a premier UK commercial real estate advisory firm, providing exceptional property solutions across every region of the United Kingdom. With a team of experienced surveyors, negotiators and property managers, we offer unrivalled local knowledge combined with national reach.</p>
+    <p style="margin-top: 1rem;">Our core business encompasses the sale and letting of offices, retail units, industrial spaces and development land across all UK locations. From prime London offices to regional industrial estates, we advise investors, landlords and occupiers with integrity, market insight and professionalism.</p>
   </div>
 </div>
 
-<!-- Legal Section -->
-<div id="legal" class="legal-section">
-  <div class="container">
-    <div class="section-header">
-      <h2>⚖️ LEGAL & REGULATORY INFORMATION</h2>
-      <p>Our commitment to compliance and professional standards</p>
-    </div>
-
-    <div class="legal-grid">
-      <div class="legal-card">
-        <h4>PROPERTY MISDESCRIPTIONS ACT</h4>
-        <p>We comply fully with the Property Misdescriptions Act 1991. All property particulars are for guidance only and intended to give a fair description of the property.</p>
-      </div>
-      <div class="legal-card">
-        <h4>COMMERCIAL LEASES</h4>
-        <p>All commercial leases are governed by the Landlord and Tenant Act 1954. We strongly recommend all parties seek independent legal advice.</p>
-      </div>
-      <div class="legal-card">
-        <h4>DATA PROTECTION (UK GDPR)</h4>
-        <p>We process personal data in accordance with UK GDPR and Data Protection Act 2018. Full privacy policy available on request.</p>
-      </div>
-    </div>
-
-    <div class="legal-footer">
-      <p>© Coast to Coast Commercial 2026 · Registered in England & Wales No. 12345678</p>
-      <p>Registered office: 1 Commercial Street, Manchester M1 1AA</p>
-    </div>
+<!-- Contact Bar -->
+<div id="contact" class="contact-bar">
+  <div class="container contact-bar-content">
+    <span>📧 CONTACT OUR COMMERCIAL TEAM:</span>
+    <a href="mailto:info@coasttocoastcommercial.co.uk" class="contact-email">INFO@COASTTOCOASTCOMMERCIAL.CO.UK</a>
+    <span>📞 020 1234 5678</span>
   </div>
 </div>
 
@@ -1000,28 +772,23 @@
         <h4>COAST TO COAST</h4>
         <a onclick="scrollToSection('about')">ABOUT US</a>
         <a onclick="scrollToSection('contact')">CONTACT</a>
-        <a onclick="scrollToSection('regions')">REGIONS</a>
-        <a onclick="scrollToSection('legal')">LEGAL</a>
+        <a onclick="scrollToSection('locations')">LOCATIONS</a>
       </div>
       <div class="footer-col">
         <h4>PROPERTY TYPES</h4>
         <a onclick="filterProperties('office')">OFFICES</a>
         <a onclick="filterProperties('retail')">RETAIL UNITS</a>
         <a onclick="filterProperties('industrial')">INDUSTRIAL</a>
-        <a onclick="filterProperties('land')">DEVELOPMENT LAND</a>
       </div>
       <div class="footer-col">
         <h4>SERVICES</h4>
         <a onclick="scrollToSection('for-sale')">COMMERCIAL SALES</a>
         <a onclick="scrollToSection('to-rent')">COMMERCIAL LETTINGS</a>
-        <a href="#">PROPERTY MANAGEMENT</a>
-        <a href="#">VALUATIONS</a>
       </div>
       <div class="footer-col">
         <h4>CONTACT</h4>
         <a href="mailto:info@coasttocoastcommercial.co.uk">EMAIL US</a>
         <a href="#">020 1234 5678</a>
-        <a onclick="scrollToSection('legal')">PRIVACY POLICY</a>
       </div>
     </div>
     <div class="copyright">
@@ -1030,11 +797,328 @@
   </div>
 </footer>
 
-<!-- Back to top button -->
+<!-- Back to top -->
 <div class="back-to-top" onclick="scrollToSection('top')">↑</div>
 
+<!-- Property Modal -->
+<div id="propertyModal" class="modal">
+  <div class="modal-content" id="modalContent">
+    <!-- Content populated by JavaScript -->
+  </div>
+</div>
+
 <script>
-// Smooth scroll to sections
+// Property Data
+const properties = {
+  sale: [
+    {
+      id: 1,
+      type: 'office',
+      status: 'FOR SALE',
+      price: '£975,000',
+      address: '42 Deansgate, Manchester M3',
+      region: 'North West',
+      city: 'Manchester',
+      postcode: 'M3',
+      size: '3,200 sq ft',
+      rooms: '12 offices',
+      epc: 'B',
+      features: ['4 parking spaces', 'Freehold', 'City centre', 'EPC B'],
+      description: 'Prime city centre office in the heart of Manchester. Recently refurbished to a high standard with modern facilities and excellent transport links.',
+      images: [
+        'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800',
+        'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800',
+        'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800'
+      ],
+      floorPlan: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=800',
+      particulars: 'Located in the heart of Manchester city centre, this stunning office suite offers 3,200 sq ft of premium workspace across two floors. The property features 12 private offices, meeting rooms, kitchen facilities and disabled access. Transport links: 2 minutes walk from Deansgate station.'
+    },
+    {
+      id: 2,
+      type: 'retail',
+      status: 'FOR SALE',
+      price: '£1,425,000',
+      address: '88 Bull Ring, Birmingham B5',
+      region: 'Midlands',
+      city: 'Birmingham',
+      postcode: 'B5',
+      size: '5,500 sq ft',
+      rooms: '3 retail units',
+      epc: 'C',
+      features: ['10 parking spaces', 'Freehold', 'Prime retail location', 'High footfall'],
+      description: 'Excellent retail investment opportunity in Birmingham\'s premier shopping destination.',
+      images: [
+        'https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?w=800',
+        'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800',
+        'https://images.unsplash.com/photo-1519567241046-7f570eee3ce6?w=800'
+      ],
+      floorPlan: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=800',
+      particulars: 'Rare opportunity to acquire three retail units in the prestigious Bull Ring shopping centre. Total floor area 5,500 sq ft with full glazed frontage. Currently producing a passing rent of £95,000 per annum.'
+    }
+  ],
+  rent: [
+    {
+      id: 3,
+      type: 'office',
+      status: 'TO RENT',
+      price: '£4,200 pcm',
+      address: '220 Harley Street, London W1',
+      region: 'London',
+      city: 'London',
+      postcode: 'W1',
+      size: '1,800 sq ft',
+      rooms: '5 consulting rooms',
+      epc: 'B',
+      features: ['Medical use', 'Leasehold', 'Prime location', 'EPC B'],
+      description: 'Fully fitted medical suite in prestigious Harley Street location.',
+      images: [
+        'https://images.unsplash.com/photo-1584132915807-fd1f5fbc078f?w=800',
+        'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800',
+        'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800'
+      ],
+      floorPlan: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=800',
+      particulars: 'Exceptional medical suite in the heart of Harley Street\'s medical district. Comprising 5 consulting rooms, 2 treatment rooms, reception area and staff facilities. Fully air conditioned with CAT5 data cabling.'
+    },
+    {
+      id: 4,
+      type: 'retail',
+      status: 'TO RENT',
+      price: '£5,950 pcm',
+      address: '12 The Lanes, Brighton BN1',
+      region: 'South East',
+      city: 'Brighton',
+      postcode: 'BN1',
+      size: '2,200 sq ft',
+      rooms: 'Restaurant space',
+      epc: 'C',
+      features: ['Full kitchen', 'Leasehold', 'Licensed', 'Outside seating'],
+      description: 'Prime restaurant opportunity in Brighton\'s historic Lanes.',
+      images: [
+        'https://images.unsplash.com/photo-1555992336-fb0d29498b7f?w=800',
+        'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800',
+        'https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800'
+      ],
+      floorPlan: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=800',
+      particulars: 'Fully fitted restaurant with commercial kitchen, bar area and 60 covers. Outside seating for additional 30 covers. Recently refurbished to high standard. Premises licence included.'
+    }
+  ]
+};
+
+// Locations data
+const locations = [
+  { name: 'LONDON', count: 142, region: 'London' },
+  { name: 'NORTH WEST', count: 89, region: 'North West' },
+  { name: 'SOUTH EAST', count: 98, region: 'South East' },
+  { name: 'MIDLANDS', count: 76, region: 'Midlands' },
+  { name: 'YORKSHIRE', count: 47, region: 'Yorkshire' },
+  { name: 'SCOTLAND', count: 67, region: 'Scotland' },
+  { name: 'WALES', count: 43, region: 'Wales' },
+  { name: 'SOUTH WEST', count: 76, region: 'South West' },
+  { name: 'NORTH EAST', count: 38, region: 'North East' },
+  { name: 'EAST ANGLIA', count: 54, region: 'East Anglia' },
+  { name: 'NORTHERN IRELAND', count: 34, region: 'Northern Ireland' },
+  { name: 'BELFAST AREA', count: 22, region: 'Belfast' }
+];
+
+// Initialize page
+document.addEventListener('DOMContentLoaded', function() {
+  renderProperties();
+  renderLocations();
+  renderSlideshow();
+});
+
+// Render properties
+function renderProperties() {
+  const saleGrid = document.getElementById('saleProperties');
+  const rentGrid = document.getElementById('rentProperties');
+  
+  saleGrid.innerHTML = properties.sale.map(createPropertyCard).join('');
+  rentGrid.innerHTML = properties.rent.map(createPropertyCard).join('');
+  
+  // Add click handlers
+  document.querySelectorAll('.property-card').forEach(card => {
+    card.addEventListener('click', function() {
+      const id = this.dataset.id;
+      const status = this.dataset.status;
+      const property = [...properties.sale, ...properties.rent].find(p => p.id == id);
+      openPropertyModal(property);
+    });
+  });
+}
+
+// Create property card HTML
+function createPropertyCard(property) {
+  return `
+    <div class="property-card" data-id="${property.id}" data-status="${property.status}">
+      <div class="card-image" style="background-image: url('${property.images[0]}')">
+        <span class="card-badge">${property.status}</span>
+      </div>
+      <div class="card-content">
+        <div class="price">${property.price}</div>
+        <div class="address">${property.address}</div>
+        <div class="details">${property.size} · ${property.rooms} · EPC ${property.epc}</div>
+        <div class="features">📍 ${property.region} · 📏 ${property.features[0]}</div>
+      </div>
+    </div>
+  `;
+}
+
+// Render locations
+function renderLocations() {
+  const grid = document.getElementById('locationsGrid');
+  grid.innerHTML = locations.map(loc => `
+    <div class="location-card" onclick="searchLocation('${loc.region}')">
+      <div class="location-name">${loc.name}</div>
+      <div class="location-count">${loc.count} properties</div>
+    </div>
+  `).join('');
+}
+
+// Render slideshow
+function renderSlideshow() {
+  const allProperties = [...properties.sale, ...properties.rent];
+  const slideshow = document.getElementById('slideshow');
+  const dotsContainer = document.getElementById('slideDots');
+  
+  slideshow.innerHTML = allProperties.map((prop, index) => `
+    <div class="slide">
+      <div class="slide-image" style="background-image: url('${prop.images[0]}')"></div>
+      <div class="slide-price">${prop.price}</div>
+      <div class="slide-caption">
+        <h3>${prop.address}</h3>
+        <p>${prop.size} · ${prop.rooms} · EPC ${prop.epc}</p>
+      </div>
+    </div>
+  `).join('');
+  
+  dotsContainer.innerHTML = allProperties.map((_, index) => `
+    <span class="dot ${index === 0 ? 'active' : ''}" onclick="currentSlide(${index})"></span>
+  `).join('');
+}
+
+// Slideshow functionality
+let currentSlideIndex = 0;
+
+function changeSlide(direction) {
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.dot');
+  
+  currentSlideIndex += direction;
+  
+  if (currentSlideIndex >= slides.length) currentSlideIndex = 0;
+  if (currentSlideIndex < 0) currentSlideIndex = slides.length - 1;
+  
+  document.querySelector('.slideshow').style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+  
+  dots.forEach((dot, index) => {
+    dot.classList.toggle('active', index === currentSlideIndex);
+  });
+}
+
+function currentSlide(index) {
+  currentSlideIndex = index;
+  document.querySelector('.slideshow').style.transform = `translateX(-${index * 100}%)`;
+  
+  document.querySelectorAll('.dot').forEach((dot, i) => {
+    dot.classList.toggle('active', i === index);
+  });
+}
+
+// Auto advance slideshow
+setInterval(() => changeSlide(1), 5000);
+
+// Property modal
+function openPropertyModal(property) {
+  const modal = document.getElementById('propertyModal');
+  const content = document.getElementById('modalContent');
+  
+  content.innerHTML = `
+    <div class="modal-header">
+      <h2>${property.address}</h2>
+      <button class="close-modal" onclick="closeModal()">×</button>
+    </div>
+    <div class="modal-body">
+      <div class="property-gallery">
+        ${property.images.map(img => `
+          <div class="gallery-image" style="background-image: url('${img}')"></div>
+        `).join('')}
+      </div>
+      
+      <div style="font-size: 2rem; font-weight: 700; color: #000000; margin: 1rem 0;">
+        ${property.price}
+      </div>
+      
+      <div class="details-grid">
+        <div>
+          <div class="detail-item">
+            <div class="detail-label">Property Type</div>
+            <div class="detail-value">${property.type.toUpperCase()}</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">Size</div>
+            <div class="detail-value">${property.size}</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">Accommodation</div>
+            <div class="detail-value">${property.rooms}</div>
+          </div>
+        </div>
+        <div>
+          <div class="detail-item">
+            <div class="detail-label">Location</div>
+            <div class="detail-value">${property.region} · ${property.city}</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">Postcode</div>
+            <div class="detail-value">${property.postcode}</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">EPC Rating</div>
+            <div class="detail-value">${property.epc}</div>
+          </div>
+        </div>
+      </div>
+      
+      <h3 style="margin: 2rem 0 1rem;">Description</h3>
+      <p style="color: #4a5b6b;">${property.description}</p>
+      
+      <h3 style="margin: 2rem 0 1rem;">Key Features</h3>
+      <div class="features-list">
+        ${property.features.map(f => `<span class="feature-tag">✓ ${f}</span>`).join('')}
+      </div>
+      
+      <h3 style="margin: 2rem 0 1rem;">Floor Plan</h3>
+      <div class="floor-plan">
+        <img src="${property.floorPlan}" alt="Floor plan">
+      </div>
+      
+      <h3 style="margin: 2rem 0 1rem;">Full Particulars</h3>
+      <p style="color: #4a5b6b;">${property.particulars}</p>
+      
+      <div style="background: #f8faff; padding: 1.5rem; border-radius: 12px; margin-top: 2rem;">
+        <h4 style="margin-bottom: 1rem;">Contact us about this property</h4>
+        <a href="mailto:info@coasttocoastcommercial.co.uk?subject=Enquiry%20about%20${property.address}" style="color: #000000; font-weight: 600;">📧 info@coasttocoastcommercial.co.uk</a>
+        <p style="margin-top: 0.5rem;">📞 020 1234 5678</p>
+      </div>
+    </div>
+  `;
+  
+  modal.style.display = 'block';
+}
+
+function closeModal() {
+  document.getElementById('propertyModal').style.display = 'none';
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+  const modal = document.getElementById('propertyModal');
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+}
+
+// Smooth scroll
 function scrollToSection(sectionId) {
   if (sectionId === 'top') {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1046,72 +1130,46 @@ function scrollToSection(sectionId) {
   }
 }
 
-// Search function for regions, cities and postcodes
+// Search function
 function searchProperties() {
   const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
   
   if (searchTerm === '') {
-    alert('Please enter a region, city or postcode');
+    alert('Please enter a location');
     return;
   }
   
-  const saleCards = document.querySelectorAll('#saleProperties .property-card');
-  const rentCards = document.querySelectorAll('#rentProperties .property-card');
-  const allCards = [...saleCards, ...rentCards];
+  const allProperties = [...properties.sale, ...properties.rent];
+  const matches = allProperties.filter(p => 
+    p.region.toLowerCase().includes(searchTerm) ||
+    p.city.toLowerCase().includes(searchTerm) ||
+    p.postcode.toLowerCase().includes(searchTerm)
+  );
   
-  let matchFound = false;
-  let matchedItems = [];
-  
-  allCards.forEach(card => {
-    const cardRegion = card.dataset.region?.toLowerCase() || '';
-    const cardCity = card.dataset.city?.toLowerCase() || '';
-    const cardPostcode = card.dataset.postcode?.toLowerCase() || '';
-    const cardAddress = card.querySelector('.address').textContent.toLowerCase();
-    
-    const matches = cardRegion.includes(searchTerm) || 
-                    cardCity.includes(searchTerm) || 
-                    cardPostcode.includes(searchTerm) || 
-                    cardAddress.includes(searchTerm);
-    
-    if (matches) {
-      matchFound = true;
-      matchedItems.push(cardRegion || cardCity);
-      card.classList.add('highlight');
-      setTimeout(() => {
-        card.classList.remove('highlight');
-      }, 3000);
-    }
-  });
-  
-  if (matchFound) {
-    alert(`✓ Found properties matching "${searchTerm}" in ${[...new Set(matchedItems)].join(', ')}`);
-    const firstMatch = document.querySelector('.property-card.highlight');
-    if (firstMatch) {
-      firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
+  if (matches.length > 0) {
+    alert(`Found ${matches.length} properties in ${searchTerm}`);
+    scrollToSection('for-sale');
   } else {
-    alert(`No matches found for "${searchTerm}". Try regions like: North West, South East, Scotland, Wales, Midlands`);
+    alert('No properties found in this location. Try searching for: London, Manchester, North West, etc.');
   }
 }
 
-// Search by region from grid
-document.querySelectorAll('.region-card').forEach(card => {
-  card.addEventListener('click', function() {
-    const region = this.dataset.region;
-    document.getElementById('searchInput').value = region;
-    searchProperties();
-  });
-});
+// Search by location
+function searchLocation(region) {
+  document.getElementById('searchInput').value = region;
+  searchProperties();
+}
 
-// Filter properties by type (removed 'all' option)
+// Filter properties by type
 function filterProperties(type) {
   const saleCards = document.querySelectorAll('#saleProperties .property-card');
   const rentCards = document.querySelectorAll('#rentProperties .property-card');
-  const allCards = [...saleCards, ...rentCards];
   
   let visibleCount = 0;
-  allCards.forEach(card => {
-    if (card.dataset.type === type) {
+  
+  [...saleCards, ...rentCards].forEach(card => {
+    const property = [...properties.sale, ...properties.rent].find(p => p.id == card.dataset.id);
+    if (property.type === type) {
       card.style.display = 'block';
       visibleCount++;
     } else {
@@ -1119,18 +1177,10 @@ function filterProperties(type) {
     }
   });
   
-  alert(`Showing ${visibleCount} ${type.toUpperCase()} properties across UK regions`);
+  alert(`Showing ${visibleCount} ${type.toUpperCase()} properties`);
   scrollToSection('for-sale');
 }
-
-// Make all region cards clickable
-document.addEventListener('DOMContentLoaded', function() {
-  // Set the website URL for search engines
-  if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-    console.log('Running locally - Coast to Coast Commercial');
-  }
-});
 </script>
 
 </body>
-  </html>
+</html>
