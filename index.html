@@ -770,4 +770,136 @@
       </div>
       <div class="legal-card">
         <h4>Money Laundering Regulations</h4>
-        <p>As a regulated property firm, we comply with the Money La
+        <p>As a regulated property firm, we comply with the Money Laundering, Terrorist Financing and Transfer of Funds Regulations 2017. Proof of identity and address is required for all successful purchasers and tenants prior to transaction completion.</p>
+      </div>
+      <div class="legal-card">
+        <h4>Energy Performance Certificates</h4>
+        <p>EPCs are provided for all commercial properties as required by the Energy Performance of Buildings (England and Wales) Regulations 2012. All EPC ratings displayed are current and valid. Full certificates available on request.</p>
+      </div>
+      <div class="legal-card">
+        <h4>Complaints Procedure</h4>
+        <p>We are members of The Property Ombudsman scheme (membership no: TPO1234). Our full complaints procedure is available on request. In the event of a dispute, clients may contact The Property Ombudsman for independent resolution.</p>
+      </div>
+    </div>
+
+    <div class="legal-footer">
+      <p>© Coast to Coast Commercial is a trading name of Coast to Coast Properties Ltd. Registered in England & Wales No. 12345678. Registered office: 1 Commercial Street, Manchester M1 1AA.</p>
+      <p style="margin-top: 1rem;">VAT Registration No: GB 123 4567 89. RICS Regulated Firm. All rights reserved.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Coast to Coast</h4>
+        <a onclick="scrollToSection('about')">About us</a>
+        <a onclick="scrollToSection('contact')">Contact</a>
+        <a onclick="scrollToSection('cities')">Locations</a>
+        <a onclick="scrollToSection('legal')">Legal</a>
+      </div>
+      <div class="footer-col">
+        <h4>Property types</h4>
+        <a onclick="filterProperties('office')">Offices</a>
+        <a onclick="filterProperties('retail')">Retail units</a>
+        <a onclick="filterProperties('industrial')">Industrial</a>
+        <a onclick="filterProperties('land')">Development land</a>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a onclick="scrollToSection('for-sale')">Commercial sales</a>
+        <a onclick="scrollToSection('to-rent')">Commercial lettings</a>
+        <a href="#">Property management</a>
+        <a href="#">Valuations</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:info.coastocoastcommercial@gmail.com">Email us</a>
+        <a href="#">Office: 020 1234 5678</a>
+        <a onclick="scrollToSection('legal')">Privacy policy</a>
+        <a onclick="scrollToSection('legal')">Terms of use</a>
+      </div>
+    </div>
+    <div class="copyright">
+      © Coast to Coast Commercial 2026 · All rights reserved · Part of the UK Commercial Property Network
+    </div>
+  </div>
+</footer>
+
+<script>
+// Smooth scroll to sections
+function scrollToSection(sectionId) {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+// Search function
+function searchProperties() {
+  const searchTerm = document.getElementById('searchInput').value.trim();
+  if (searchTerm === '') {
+    alert('Please enter a city or postcode');
+    return;
+  }
+  
+  const ukPostcodes = ['M1', 'M2', 'M3', 'M4', 'B1', 'B2', 'LS1', 'LS2', 'G1', 'G2', 'EH1', 'EH2', 'CF10', 'BT1', 'L1', 'L2', 'S1', 'NE1', 'NG1', 'LE1', 'SO14', 'PO1', 'PL1', 'BN1', 'OX1', 'CB1', 'YO1', 'BA1', 'CV1', 'ST1', 'DE1', 'WV1', 'TS1', 'SR1', 'HU1', 'BD1', 'AB10', 'DD1', 'PH1', 'FK8', 'SA1', 'NP20', 'LL11', 'BT48', 'BT27'];
+  
+  const ukCities = ['London', 'Manchester', 'Birmingham', 'Leeds', 'Liverpool', 'Bristol', 'Sheffield', 'Newcastle', 'Nottingham', 'Leicester', 'Southampton', 'Portsmouth', 'Plymouth', 'Brighton', 'Oxford', 'Cambridge', 'York', 'Bath', 'Coventry', 'Stoke', 'Derby', 'Wolverhampton', 'Middlesbrough', 'Sunderland', 'Hull', 'Bradford', 'Glasgow', 'Edinburgh', 'Aberdeen', 'Dundee', 'Perth', 'Stirling', 'Cardiff', 'Swansea', 'Newport', 'Wrexham', 'Belfast', 'Derry', 'Lisburn'];
+  
+  const match = [...ukCities, ...ukPostcodes].find(item => 
+    item.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  
+  if (match) {
+    alert(`Showing commercial properties in ${match} area. Click OK to view all UK properties.`);
+    scrollToSection('for-sale');
+  } else {
+    alert(`Showing all UK commercial properties. For exact matches, try: Manchester, London, M1, B1, etc.`);
+  }
+}
+
+// Search by city from grid
+function searchCity(city) {
+  document.getElementById('searchInput').value = city;
+  alert(`Showing commercial properties in ${city} area`);
+  scrollToSection('for-sale');
+}
+
+// Filter properties by type
+function filterProperties(type) {
+  if (type === 'all') {
+    document.querySelectorAll('.property-card').forEach(card => {
+      card.style.display = 'block';
+    });
+    alert('Showing all property types');
+  } else {
+    document.querySelectorAll('.property-card').forEach(card => {
+      if (card.dataset.type === type) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+    alert(`Showing ${type} properties only`);
+  }
+  scrollToSection('for-sale');
+}
+
+// Handle all navigation clicks
+document.addEventListener('DOMContentLoaded', function() {
+  // Smooth scroll for all anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if(target) target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+});
+</script>
+
+</body>
+</html>
