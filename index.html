@@ -90,6 +90,14 @@
       }
     }
 
+    .logo span {
+      font-size: 0.9rem;
+      color: #cccccc;
+      display: block;
+      text-align: center;
+      letter-spacing: 2px;
+    }
+
     .nav {
       display: flex;
       gap: 1rem;
@@ -186,6 +194,10 @@
         padding: 0 2.5rem;
         width: auto;
       }
+    }
+
+    .search-btn:hover {
+      background: #333333;
     }
 
     /* Slideshow Section */
@@ -307,12 +319,35 @@
       background: #000000;
     }
 
+    /* Section Headers */
+    .section-header {
+      margin: 2rem 0 1.5rem;
+    }
+
+    .section-header h2 {
+      font-size: 1.8rem;
+      color: #000000;
+      font-weight: 700;
+    }
+
+    @media (min-width: 768px) {
+      .section-header h2 {
+        font-size: 2.2rem;
+      }
+    }
+
+    .section-header p {
+      color: #6f7d8c;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+    }
+
     /* Property Grid */
     .property-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 1rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
     }
 
     @media (min-width: 600px) {
@@ -386,6 +421,15 @@
       font-size: 0.9rem;
     }
 
+    .features {
+      display: flex;
+      gap: 1rem;
+      color: #6f7d8c;
+      font-size: 0.85rem;
+      border-top: 1px solid #e6e9ed;
+      padding-top: 0.8rem;
+    }
+
     /* Modal Styles */
     .modal {
       display: none;
@@ -434,6 +478,10 @@
       font-size: 2rem;
       cursor: pointer;
       color: #666;
+    }
+
+    .close-modal:hover {
+      color: #000000;
     }
 
     .modal-body {
@@ -522,7 +570,7 @@
     .contact-bar {
       background: #000000;
       color: white;
-      padding: 1rem 0;
+      padding: 1.2rem 0;
       margin: 2rem 0;
     }
 
@@ -537,8 +585,12 @@
     .contact-email {
       color: white;
       text-decoration: none;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 600;
+    }
+
+    .contact-email:hover {
+      text-decoration: underline;
     }
 
     /* Locations Grid */
@@ -574,21 +626,43 @@
       text-align: center;
       border: 1px solid #e6e9ed;
       cursor: pointer;
+      transition: 0.2s;
     }
 
     .location-card:hover {
       border-color: #000000;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     .location-name {
       font-weight: 600;
       color: #000000;
+      font-size: 1rem;
     }
 
     .location-count {
       color: #6f7d8c;
       font-size: 0.8rem;
       margin-top: 0.3rem;
+    }
+
+    /* About Section */
+    .about-section {
+      padding: 2rem 0;
+    }
+
+    .about-section h2 {
+      font-size: 1.8rem;
+      color: #000000;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-section p {
+      color: #2b4b62;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      line-height: 1.6;
     }
 
     /* Footer */
@@ -617,6 +691,8 @@
       color: #ffffff;
       font-size: 1.1rem;
       font-weight: 700;
+      font-family: 'Impact', 'Arial Black', sans-serif;
+      letter-spacing: 1px;
     }
 
     .footer-col a {
@@ -641,6 +717,15 @@
       font-size: 0.8rem;
     }
 
+    .copyright a {
+      color: #999999;
+      text-decoration: none;
+    }
+
+    .copyright a:hover {
+      color: #ffffff;
+    }
+
     /* Back to top */
     .back-to-top {
       position: fixed;
@@ -658,6 +743,11 @@
       font-size: 1.5rem;
       cursor: pointer;
       z-index: 99;
+      border: 2px solid white;
+    }
+
+    .back-to-top:hover {
+      background: #333333;
     }
   </style>
 </head>
@@ -748,11 +838,12 @@
 
 <!-- About Section -->
 <div id="about" class="container">
-  <div class="about-section" style="padding: 2rem 0;">
+  <div class="about-section">
     <h2>ABOUT SAFE GROUP COMMERCIAL</h2>
-    <p style="margin-top: 1rem;">Safe Group Commercial is a premier UK commercial real estate advisory firm, providing exceptional property solutions across every region of the United Kingdom. With a team of experienced surveyors, negotiators and property managers, we offer unrivalled local knowledge combined with national reach.</p>
-    <p style="margin-top: 1rem;">Our core business encompasses the sale and letting of offices, retail units, industrial spaces and development land across all UK locations. From prime London offices to regional industrial estates, we advise investors, landlords and occupiers with integrity, market insight and professionalism.</p>
-    <p style="margin-top: 1rem;">Contact our team today at <strong>info.safegroupcommercial@gmail.com</strong> for all commercial property enquiries.</p>
+    <p>Safe Group Commercial is a premier UK commercial real estate advisory firm, providing exceptional property solutions across every region of the United Kingdom. With a team of experienced surveyors, negotiators and property managers, we offer unrivalled local knowledge combined with national reach.</p>
+    <p>Our core business encompasses the sale and letting of offices, retail units, industrial spaces and development land across all UK locations. From prime London offices to regional industrial estates, we advise investors, landlords and occupiers with integrity, market insight and professionalism.</p>
+    <p>We are proud to be an independent firm, putting client relationships at the heart of everything we do. All members of our team are RICS-regulated and bound by the highest professional standards.</p>
+    <p>Contact our team today at <strong>info.safegroupcommercial@gmail.com</strong> for all commercial property enquiries.</p>
   </div>
 </div>
 
@@ -774,26 +865,32 @@
         <a onclick="scrollToSection('about')">ABOUT US</a>
         <a onclick="scrollToSection('contact')">CONTACT</a>
         <a onclick="scrollToSection('locations')">LOCATIONS</a>
+        <a onclick="scrollToSection('slideshow')">LATEST</a>
       </div>
       <div class="footer-col">
         <h4>PROPERTY TYPES</h4>
         <a onclick="filterProperties('office')">OFFICES</a>
         <a onclick="filterProperties('retail')">RETAIL UNITS</a>
         <a onclick="filterProperties('industrial')">INDUSTRIAL</a>
+        <a onclick="filterProperties('land')">DEVELOPMENT LAND</a>
       </div>
       <div class="footer-col">
         <h4>SERVICES</h4>
         <a onclick="scrollToSection('for-sale')">COMMERCIAL SALES</a>
         <a onclick="scrollToSection('to-rent')">COMMERCIAL LETTINGS</a>
+        <a href="#">PROPERTY MANAGEMENT</a>
+        <a href="#">VALUATIONS</a>
       </div>
       <div class="footer-col">
         <h4>CONTACT</h4>
         <a href="mailto:info.safegroupcommercial@gmail.com">EMAIL US</a>
         <a href="#">020 1234 5678</a>
+        <a href="#">LONDON OFFICE</a>
+        <a href="#">MANCHESTER OFFICE</a>
       </div>
     </div>
     <div class="copyright">
-      © SAFE GROUP COMMERCIAL 2026 · ALL RIGHTS RESERVED · <a href="mailto:info.safegroupcommercial@gmail.com" style="color: #999999;">info.safegroupcommercial@gmail.com</a>
+      © SAFE GROUP COMMERCIAL 2026 · ALL RIGHTS RESERVED · <a href="mailto:info.safegroupcommercial@gmail.com">INFO.SAFEGROUPCOMMERCIAL@GMAIL.COM</a>
     </div>
   </div>
 </footer>
@@ -1100,6 +1197,7 @@ function openPropertyModal(property) {
         <h4 style="margin-bottom: 1rem;">Contact us about this property</h4>
         <a href="mailto:info.safegroupcommercial@gmail.com?subject=Enquiry%20about%20${encodeURIComponent(property.address)}" style="color: #000000; font-weight: 600;">📧 info.safegroupcommercial@gmail.com</a>
         <p style="margin-top: 0.5rem;">📞 020 1234 5678</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Safe Group Commercial</p>
       </div>
     </div>
   `;
@@ -1165,12 +1263,22 @@ function searchLocation(region) {
 function filterProperties(type) {
   const saleCards = document.querySelectorAll('#saleProperties .property-card');
   const rentCards = document.querySelectorAll('#rentProperties .property-card');
+  const allCards = [...saleCards, ...rentCards];
+  
+  if (type === 'all') {
+    allCards.forEach(card => {
+      card.style.display = 'block';
+    });
+    alert('Showing all properties');
+    scrollToSection('for-sale');
+    return;
+  }
   
   let visibleCount = 0;
   
-  [...saleCards, ...rentCards].forEach(card => {
+  allCards.forEach(card => {
     const property = [...properties.sale, ...properties.rent].find(p => p.id == card.dataset.id);
-    if (property.type === type) {
+    if (property && property.type === type) {
       card.style.display = 'block';
       visibleCount++;
     } else {
@@ -1178,10 +1286,14 @@ function filterProperties(type) {
     }
   });
   
-  alert(`Showing ${visibleCount} ${type.toUpperCase()} properties`);
+  if (visibleCount > 0) {
+    alert(`Showing ${visibleCount} ${type.toUpperCase()} properties`);
+  } else {
+    alert(`No ${type.toUpperCase()} properties found`);
+  }
   scrollToSection('for-sale');
 }
 </script>
 
 </body>
-</html>
+      </html>
